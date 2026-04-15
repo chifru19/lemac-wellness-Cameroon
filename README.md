@@ -1,4 +1,4 @@
-# Serein Wellness & Spa - Cameroon
+# Lemac Wellness & Spa - Cameroon
 A professional wellness platform infrastructure featuring automated security auditing and multi-currency support.
 
 ## 🚀 Key Features
