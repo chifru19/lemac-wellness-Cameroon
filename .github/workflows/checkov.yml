@@ -1,0 +1,33 @@
+name: Checkov Security Scan
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Run Checkov
+        id: checkov
+        uses: bridgecrewio/checkov-action@master
+        with:
+          # This tells Checkov to scan the whole directory
+          directory: .
+          # This ensures the build doesn't fail on your first few tries 
+          # while you are still learning to fix the errors
+          soft_fail: true 
+          framework: all
+          output_format: cli,sarif
+          output_file_path: console,results.sarif
+
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v3
+        if: success() || failure()
+        with:
+          sarif_file: results.sarif
