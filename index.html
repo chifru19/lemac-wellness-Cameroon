@@ -14,7 +14,6 @@
         .masonry-item { break-inside: avoid; margin-bottom: 1.5rem; }
         .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); }
         .hero-gradient { background: radial-gradient(circle at top right, #f0f9f9 0%, #fdfcf8 100%); }
-        .price-tag::before { content: ''; }
         .card-hover { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
         .card-hover:hover { transform: translateY(-10px); box-shadow: 0 25px 50px -12px rgba(20, 78, 78, 0.15); }
     </style>
@@ -37,7 +36,7 @@
     <header class="relative py-24 px-8 hero-gradient overflow-hidden">
         <div class="container mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
             <div>
-                <span class="text-teal-700 font-bold tracking-[0.4em] text-[10px] uppercase block mb-4">Architecture by Frank Fru</span>
+                <span class="text-teal-700 font-bold tracking-[0.4em] text-[10px] uppercase block mb-4 font-black">Architecture by Frank Fru</span>
                 <h1 class="text-6xl md:text-8xl mb-8 text-teal-950 leading-[0.9] font-bold">Lemac <br>Luxury Spa.</h1>
                 <p class="text-xl text-stone-600 mb-10 max-w-md font-light leading-relaxed italic">
                     Defining the future of wellness in Douala. We merge medical-grade hygiene with ancestral Cameroonian rituals.
@@ -52,7 +51,6 @@
                     <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover" alt="Lemac Douala Interior">
                 </div>
                 <div class="absolute -top-12 -right-12 w-64 h-64 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40"></div>
-                <div class="absolute -bottom-12 -left-12 w-64 h-64 bg-stone-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40"></div>
             </div>
         </div>
     </header>
@@ -64,7 +62,7 @@
                 <p class="text-stone-500 font-light text-lg">Every treatment is a secured investment in your personal health.</p>
             </div>
             <div class="p-4 bg-stone-100/50 rounded-[2rem] flex items-center gap-5 border border-stone-100 backdrop-blur-sm shadow-inner">
-                <span class="text-[10px] font-black text-stone-400 uppercase tracking-widest ml-2">Market Currency:</span>
+                <span class="text-[10px] font-black text-stone-400 uppercase tracking-widest ml-2">Display Currency:</span>
                 <select id="currencySelector" onchange="convertPrices()" class="bg-white border border-stone-200 text-xs px-4 py-2 rounded-xl shadow-sm focus:ring-2 focus:ring-teal-500 outline-none cursor-pointer font-bold text-teal-900">
                     <option value="XAF">CFA (XAF)</option>
                     <option value="EUR">Euro (€)</option>
@@ -117,7 +115,7 @@
             <div class="p-16 bg-teal-950 text-white flex flex-col justify-between relative">
                 <div class="relative z-10">
                     <h2 class="text-6xl mb-8 font-bold leading-[0.9] tracking-tighter">Your Journey <br>Starts Here.</h2>
-                    <p class="text-teal-200 mb-12 font-light text-lg leading-relaxed">Finalize your booking via WhatsApp. We process deposits using MTN MoMo and Orange Money for maximum security.</p>
+                    <p class="text-teal-200 mb-12 font-light text-lg leading-relaxed italic">Secure your booking via WhatsApp. We accept MTN MoMo and Orange Money for your convenience.</p>
                 </div>
                 <div class="space-y-8 text-xs tracking-[0.3em] uppercase font-black text-teal-400 relative z-10">
                     <p class="flex items-center gap-5 text-white bg-teal-900/50 p-4 rounded-2xl border border-teal-800">
@@ -134,15 +132,15 @@
             <div class="p-16 bg-white">
                 <form id="spaBookingForm" class="space-y-8">
                     <div>
-                        <label class="text-[10px] font-black text-stone-400 uppercase tracking-widest ml-4 mb-2 block">Customer Identity</label>
+                        <label class="text-[10px] font-black text-stone-400 uppercase tracking-widest ml-4 mb-2 block font-black">Customer Identity</label>
                         <input type="text" id="custName" placeholder="Enter Full Name" class="w-full p-5 rounded-[1.5rem] border border-stone-200 focus:ring-2 focus:ring-teal-600 outline-none transition font-medium" required>
                     </div>
                     <div>
-                        <label class="text-[10px] font-black text-stone-400 uppercase tracking-widest ml-4 mb-2 block">Contact Line</label>
+                        <label class="text-[10px] font-black text-stone-400 uppercase tracking-widest ml-4 mb-2 block font-black">Contact Line</label>
                         <input type="tel" id="custPhone" placeholder="Mobile / WhatsApp Number" class="w-full p-5 rounded-[1.5rem] border border-stone-200 focus:ring-2 focus:ring-teal-600 outline-none transition font-medium" required>
                     </div>
                     <div>
-                        <label class="text-[10px] font-black text-stone-400 uppercase tracking-widest ml-4 mb-2 block">Ritual Category</label>
+                        <label class="text-[10px] font-black text-stone-400 uppercase tracking-widest ml-4 mb-2 block font-black">Ritual Category</label>
                         <select id="serviceType" class="w-full p-5 rounded-[1.5rem] border border-stone-200 focus:ring-2 focus:ring-teal-600 outline-none bg-white transition cursor-pointer font-bold">
                             <option value="25000">Massage (25,000 XAF)</option>
                             <option value="10000">Luxury Pedicure (10,000 XAF)</option>
@@ -159,26 +157,19 @@
     </section>
 
     <section id="admin" class="py-24 px-8 bg-stone-950 text-white">
-        <div class="container mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-baseline mb-12 gap-5">
-                <h2 class="text-4xl font-bold tracking-tighter text-teal-400 uppercase italic">Lemac Infrastructure Logs</h2>
-                <div class="flex items-center gap-3">
-                    <span class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
-                    <p class="text-[10px] tracking-[0.3em] font-black text-stone-500">Live Backend Stream</p>
-                </div>
-            </div>
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold tracking-tighter text-teal-400 uppercase mb-12 font-black">Lemac Manager Panel</h2>
             <div class="bg-stone-900 rounded-[2.5rem] overflow-hidden border border-stone-800 shadow-2xl">
                 <table class="w-full text-left text-sm">
                     <thead>
                         <tr class="border-b border-stone-800 bg-stone-800/50 uppercase text-stone-600 text-[10px] tracking-widest font-black">
                             <th class="p-8">System Time</th>
-                            <th class="p-8">Entity Name</th>
-                            <th class="p-8">Service Requested</th>
+                            <th class="p-8">Customer Entity</th>
+                            <th class="p-8">Requested Service</th>
                             <th class="p-8 text-right">Verification Status</th>
                         </tr>
                     </thead>
-                    <tbody id="adminTableBody">
-                        </tbody>
+                    <tbody id="adminTableBody"></tbody>
                 </table>
             </div>
         </div>
@@ -188,19 +179,16 @@
         <div class="flex justify-center space-x-12 mb-10 font-black text-[11px] tracking-[0.3em] uppercase">
             <a href="https://frankfru.com" class="hover:text-teal-900 transition underline decoration-teal-200 decoration-2 underline-offset-8">frankfru.com</a>
             <a href="https://github.com/chifru19" class="hover:text-teal-900 transition underline decoration-teal-200 decoration-2 underline-offset-8">GitHub/chifru19</a>
-            <a href="https://linkedin.com" class="hover:text-teal-900 text-blue-500 transition underline decoration-blue-200 decoration-2 underline-offset-8">LinkedIn</a>
         </div>
         <p class="text-[10px] uppercase tracking-[0.5em] font-black text-stone-400">© 2026 LEMAC WELLNESS SPA | AKWA, DOUALA, CAMEROON | ENGINEERED BY FRANK FRU</p>
     </footer>
 
     <script>
-        // --- Multi-Currency Processor ---
         function convertPrices() {
             const currency = document.getElementById('currencySelector').value;
             const prices = document.querySelectorAll('.price-tag');
             const rates = { XAF: 1, EUR: 0.00152, USD: 0.00168 };
             const symbols = { XAF: 'XAF', EUR: '€', USD: '$' };
-
             prices.forEach(el => {
                 const baseValue = parseFloat(el.getAttribute('data-base'));
                 const converted = (baseValue * rates[currency]).toLocaleString(undefined, {
@@ -210,7 +198,6 @@
             });
         }
 
-        // --- WhatsApp Payload & Admin Logging ---
         document.getElementById('spaBookingForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const name = document.getElementById('custName').value;
@@ -218,27 +205,15 @@
             const service = document.getElementById('serviceType').options[document.getElementById('serviceType').selectedIndex].text;
             const price = document.getElementById('serviceType').value;
             
-            // THE VERIFIED BUSINESS NUMBER FOR LEMAC
+            // FIXED NUMBER
             const businessNumber = "237990015006"; 
-
-            const message = `Hello Lemac Wellness! %0A%0AI am reaching out to book a session:%0A👤 Name: ${name}%0A💆‍♂️ Service: ${service}%0A💰 Price: ${price} XAF%0A📱 Contact: ${phone}%0A%0APlease provide the Mobile Money details to secure my ritual.`;
+            const message = `Hello Lemac Wellness! %0A%0AI want to book a session:%0A👤 Name: ${name}%0A💆‍♂️ Service: ${service}%0A💰 Price: ${price} XAF%0A📱 Contact: ${phone}`;
             
-            // Redirect to WhatsApp Lead
             window.open(`https://wa.me/${businessNumber}?text=${message}`, '_blank');
             
-            // Push to Admin Table Log
             const tbody = document.getElementById('adminTableBody');
-            const row = `
-                <tr class="border-b border-stone-800 bg-stone-900/40 animate-pulse">
-                    <td class="p-8 text-stone-500">${new Date().toLocaleTimeString()}</td>
-                    <td class="p-8 font-bold text-white uppercase tracking-tighter">${name}</td>
-                    <td class="p-8 text-teal-400 italic">${service}</td>
-                    <td class="p-8 text-right uppercase text-[10px] font-black text-teal-200 tracking-widest underline decoration-teal-900">Redirected</td>
-                </tr>
-            `;
+            const row = `<tr class="border-b border-stone-800 bg-stone-900/40 animate-pulse"><td class="p-8 text-stone-500">${new Date().toLocaleTimeString()}</td><td class="p-8 font-bold text-white uppercase">${name}</td><td class="p-8 text-teal-400 italic">${service}</td><td class="p-8 text-right uppercase text-[10px] font-black text-teal-200 tracking-widest">Redirected</td></tr>`;
             tbody.insertAdjacentHTML('afterbegin', row);
-            
-            alert("Success: Redirecting to WhatsApp to finalize your booking with Lemac Wellness...");
             this.reset();
         });
     </script>
