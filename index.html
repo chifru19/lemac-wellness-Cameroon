@@ -3,59 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lemac Wellness & Spa | Premium Cameroon Infrastructure</title>
+    <title>Lemac Wellness & Spa | Premium Douala Infrastructure</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        .masonry { column-count: 2; column-gap: 1rem; }
+        .masonry { column-count: 2; column-gap: 1.5rem; }
         @media (min-width: 768px) { .masonry { column-count: 3; } }
-        .masonry-item { break-inside: avoid; margin-bottom: 1rem; }
-        .glass-nav { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(8px); }
+        .masonry-item { break-inside: avoid; margin-bottom: 1.5rem; }
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); }
+        .hero-gradient { background: radial-gradient(circle at top right, #f0f9f9 0%, #fdfcf8 100%); }
         .price-tag::before { content: ''; }
+        .card-hover { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .card-hover:hover { transform: translateY(-10px); box-shadow: 0 25px 50px -12px rgba(20, 78, 78, 0.15); }
     </style>
 </head>
-<body class="bg-[#fdfcf8] text-gray-800">
+<body class="bg-[#fdfcf8] text-gray-800 leading-relaxed">
 
-    <nav class="flex justify-between items-center px-6 py-4 glass-nav border-b border-stone-100 sticky top-0 z-50">
-        <div class="text-xl font-bold text-teal-900 tracking-tighter uppercase">LEMAC WELLNESS</div>
-        <div class="hidden md:flex space-x-8 text-sm font-medium">
+    <nav class="flex justify-between items-center px-8 py-5 glass-nav border-b border-stone-100 sticky top-0 z-50">
+        <div class="text-2xl font-bold text-teal-900 tracking-tighter uppercase">LEMAC WELLNESS</div>
+        <div class="hidden md:flex space-x-10 text-[11px] font-black uppercase tracking-widest text-stone-500">
             <a href="#services" class="hover:text-teal-600 transition">Treatments</a>
-            <a href="#gallery" class="hover:text-teal-600 transition">The Sanctuary</a>
+            <a href="#gallery" class="hover:text-teal-600 transition">Sanctuary</a>
             <a href="#booking" class="hover:text-teal-600 transition">Book Now</a>
-            <a href="#admin" class="text-stone-400 hover:text-teal-900 italic transition">Admin Panel</a>
+            <a href="#admin" class="hover:text-teal-900 italic transition border-l pl-10 border-stone-200">Admin</a>
         </div>
-        <a href="https://wa.me/23799015006" target="_blank" class="bg-teal-900 text-white px-4 py-2 rounded text-xs font-bold uppercase hover:bg-teal-800 transition shadow-md">Chat via WhatsApp</a>
+        <a href="https://wa.me/237990015006" target="_blank" class="bg-teal-900 text-white px-6 py-2.5 rounded-full text-[10px] font-bold uppercase hover:bg-teal-800 transition shadow-lg flex items-center gap-2">
+            <span class="w-2 h-2 bg-green-400 rounded-full animate-ping"></span> Live WhatsApp
+        </a>
     </nav>
 
-    <header class="relative py-16 px-6 bg-teal-50 overflow-hidden">
-        <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
+    <header class="relative py-24 px-8 hero-gradient overflow-hidden">
+        <div class="container mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
             <div>
-                <span class="text-teal-700 font-bold tracking-[0.2em] text-[10px] uppercase italic">Engineered by Frank Fru</span>
-                <h1 class="text-5xl md:text-7xl mt-4 mb-6 text-teal-950 leading-tight">Lemac Wellness <br>& Luxury Spa.</h1>
-                <p class="text-lg text-gray-600 mb-8 max-w-md font-light italic">The ultimate relaxation destination in Douala. We provide elite massage therapy and medical-grade care.</p>
-                <div class="flex gap-4">
-                    <a href="#booking" class="bg-teal-800 text-white px-8 py-4 rounded-xl shadow-lg hover:bg-teal-700 transition transform hover:-translate-y-1">Book a Session</a>
-                    <a href="#services" class="bg-white text-teal-900 border border-teal-100 px-8 py-4 rounded-xl shadow-sm hover:bg-stone-50 transition">Service Menu</a>
+                <span class="text-teal-700 font-bold tracking-[0.4em] text-[10px] uppercase block mb-4">Architecture by Frank Fru</span>
+                <h1 class="text-6xl md:text-8xl mb-8 text-teal-950 leading-[0.9] font-bold">Lemac <br>Luxury Spa.</h1>
+                <p class="text-xl text-stone-600 mb-10 max-w-md font-light leading-relaxed italic">
+                    Defining the future of wellness in Douala. We merge medical-grade hygiene with ancestral Cameroonian rituals.
+                </p>
+                <div class="flex flex-wrap gap-5">
+                    <a href="#booking" class="bg-teal-900 text-white px-10 py-5 rounded-2xl shadow-xl hover:bg-teal-800 transition transform active:scale-95 font-bold">Book Treatment</a>
+                    <a href="#services" class="bg-white text-teal-900 border border-teal-100 px-10 py-5 rounded-2xl shadow-sm hover:bg-stone-50 transition font-bold">The Menu</a>
                 </div>
             </div>
             <div class="relative">
-                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=800" class="rounded-[2.5rem] shadow-2xl relative z-20 border-8 border-white" alt="Lemac Spa Interior">
-                <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-teal-100 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-pulse"></div>
+                <div class="relative z-20 rounded-[3rem] overflow-hidden border-[12px] border-white shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover" alt="Lemac Douala Interior">
+                </div>
+                <div class="absolute -top-12 -right-12 w-64 h-64 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40"></div>
+                <div class="absolute -bottom-12 -left-12 w-64 h-64 bg-stone-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40"></div>
             </div>
         </div>
     </header>
 
-    <section id="services" class="py-24 container mx-auto px-6">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-            <div class="max-w-xl">
-                <h2 class="text-4xl mb-4 text-teal-950">Signature Treatments</h2>
-                <p class="text-stone-500 font-light italic">Prices tailored for local residents and international guests.</p>
+    <section id="services" class="py-32 container mx-auto px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center mb-20 gap-8">
+            <div class="max-w-xl text-center md:text-left">
+                <h2 class="text-5xl mb-5 text-teal-950">Signature Selection</h2>
+                <p class="text-stone-500 font-light text-lg">Every treatment is a secured investment in your personal health.</p>
             </div>
-            <div class="p-3 bg-stone-100 rounded-2xl flex items-center gap-4 shadow-inner">
-                <span class="text-[10px] font-black text-stone-400 uppercase tracking-widest">Display Currency:</span>
-                <select id="currencySelector" onchange="convertPrices()" class="bg-white border border-stone-200 text-xs p-2 rounded-lg shadow-sm focus:ring-2 focus:ring-teal-500 outline-none cursor-pointer font-bold">
+            <div class="p-4 bg-stone-100/50 rounded-[2rem] flex items-center gap-5 border border-stone-100 backdrop-blur-sm shadow-inner">
+                <span class="text-[10px] font-black text-stone-400 uppercase tracking-widest ml-2">Market Currency:</span>
+                <select id="currencySelector" onchange="convertPrices()" class="bg-white border border-stone-200 text-xs px-4 py-2 rounded-xl shadow-sm focus:ring-2 focus:ring-teal-500 outline-none cursor-pointer font-bold text-teal-900">
                     <option value="XAF">CFA (XAF)</option>
                     <option value="EUR">Euro (€)</option>
                     <option value="USD">Dollar ($)</option>
@@ -63,103 +73,108 @@
             </div>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-10">
-            <div class="bg-white p-10 border border-stone-100 rounded-[2rem] hover:shadow-2xl transition duration-500 group">
-                <div class="text-4xl mb-6 transform group-hover:scale-110 transition duration-300">💆‍♀️</div>
-                <h3 class="text-2xl mb-2 text-teal-950">Massages</h3>
-                <p class="text-sm text-stone-500 mb-8 font-light">Deep tissue, Swedish, and local therapeutic oil rituals for ultimate stress relief.</p>
-                <div class="flex items-baseline gap-2">
-                    <p class="font-bold text-teal-800 text-2xl price-tag" data-base="25000">25,000 XAF</p>
-                </div>
+        <div class="grid md:grid-cols-3 gap-12">
+            <div class="bg-white p-12 border border-stone-100 rounded-[3rem] card-hover group">
+                <div class="text-5xl mb-8 transform group-hover:rotate-12 transition duration-500">💆‍♀️</div>
+                <h3 class="text-3xl mb-4 text-teal-950">Elite Massage</h3>
+                <p class="text-stone-500 mb-10 font-light leading-relaxed">Deep tissue, Swedish, and local therapeutic oil rituals for neurological recovery.</p>
+                <p class="font-bold text-teal-900 text-3xl price-tag tracking-tighter" data-base="25000">25,000 XAF</p>
             </div>
-            <div class="bg-white p-10 border border-stone-100 rounded-[2rem] hover:shadow-2xl transition duration-500 group">
-                <div class="text-4xl mb-6 transform group-hover:scale-110 transition duration-300">💅</div>
-                <h3 class="text-2xl mb-2 text-teal-950">Luxury Pedicures</h3>
-                <p class="text-sm text-stone-500 mb-8 font-light">High-hygiene medical grade care paired with luxury aesthetics and finishes.</p>
-                <div class="flex items-baseline gap-2">
-                    <p class="font-bold text-teal-800 text-2xl price-tag" data-base="10000">10,000 XAF</p>
-                </div>
+            <div class="bg-white p-12 border border-stone-100 rounded-[3rem] card-hover group">
+                <div class="text-5xl mb-8 transform group-hover:rotate-12 transition duration-500">💅</div>
+                <h3 class="text-3xl mb-4 text-teal-950">Med-Pedicure</h3>
+                <p class="text-stone-500 mb-10 font-light leading-relaxed">Surgical-grade sterilization paired with luxury aesthetic finishes for your feet.</p>
+                <p class="font-bold text-teal-900 text-3xl price-tag tracking-tighter" data-base="10000">10,000 XAF</p>
             </div>
-            <div class="bg-white p-10 border border-stone-100 rounded-[2rem] hover:shadow-2xl transition duration-500 group">
-                <div class="text-4xl mb-6 transform group-hover:scale-110 transition duration-300">🧘‍♂️</div>
-                <h3 class="text-2xl mb-2 text-teal-950">Body Wellness</h3>
-                <p class="text-sm text-stone-500 mb-8 font-light">Full body scrubs, volcanic clay wraps, and holistic skin rejuvenation ritual.</p>
-                <div class="flex items-baseline gap-2">
-                    <p class="font-bold text-teal-800 text-2xl price-tag" data-base="15000">15,000 XAF</p>
-                </div>
+            <div class="bg-white p-12 border border-stone-100 rounded-[3rem] card-hover group">
+                <div class="text-5xl mb-8 transform group-hover:rotate-12 transition duration-500">🧘‍♂️</div>
+                <h3 class="text-3xl mb-4 text-teal-950">Body Rituals</h3>
+                <p class="text-stone-500 mb-10 font-light leading-relaxed">Hydrating volcanic clay wraps and bio-organic body scrubs for skin health.</p>
+                <p class="font-bold text-teal-900 text-3xl price-tag tracking-tighter" data-base="15000">15,000 XAF</p>
             </div>
         </div>
     </section>
 
-    <section id="gallery" class="py-16 px-6 bg-stone-50">
+    <section id="gallery" class="py-24 px-8 bg-stone-50/50 border-y border-stone-100">
         <div class="container mx-auto">
-            <h2 class="text-3xl mb-12 text-center text-teal-950 font-light italic">The Lemac Sanctuary Experience</h2>
+            <div class="text-center mb-16">
+                <h2 class="text-4xl text-teal-950 font-light italic tracking-tight">The Lemac Visual Experience</h2>
+                <div class="w-24 h-1 bg-teal-100 mx-auto mt-6"></div>
+            </div>
             <div class="masonry">
-                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=400" class="rounded-3xl shadow-md hover:opacity-90 transition"></div>
-                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc206e?auto=format&fit=crop&q=80&w=400" class="rounded-3xl shadow-md hover:opacity-90 transition"></div>
-                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&q=80&w=400" class="rounded-3xl shadow-md hover:opacity-90 transition"></div>
-                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&q=80&w=400" class="rounded-3xl shadow-md hover:opacity-90 transition"></div>
-                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=400" class="rounded-3xl shadow-md hover:opacity-90 transition"></div>
-                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1591343395082-e120087024b4?auto=format&fit=crop&q=80&w=400" class="rounded-3xl shadow-md hover:opacity-90 transition"></div>
+                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=400" class="rounded-[2rem] shadow-lg hover:scale-[1.03] transition duration-500 border-4 border-white"></div>
+                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc206e?auto=format&fit=crop&q=80&w=400" class="rounded-[2rem] shadow-lg hover:scale-[1.03] transition duration-500 border-4 border-white"></div>
+                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&q=80&w=400" class="rounded-[2rem] shadow-lg hover:scale-[1.03] transition duration-500 border-4 border-white"></div>
+                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&q=80&w=400" class="rounded-[2rem] shadow-lg hover:scale-[1.03] transition duration-500 border-4 border-white"></div>
+                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=400" class="rounded-[2rem] shadow-lg hover:scale-[1.03] transition duration-500 border-4 border-white"></div>
+                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1591343395082-e120087024b4?auto=format&fit=crop&q=80&w=400" class="rounded-[2rem] shadow-lg hover:scale-[1.03] transition duration-500 border-4 border-white"></div>
             </div>
         </div>
     </section>
 
-    <section id="booking" class="py-24 px-6 container mx-auto">
-        <div class="max-w-5xl mx-auto bg-white border border-stone-100 rounded-[3rem] overflow-hidden shadow-2xl grid md:grid-cols-2">
-            <div class="p-12 bg-teal-900 text-white flex flex-col justify-between">
-                <div>
-                    <h2 class="text-5xl mb-6 font-bold leading-tight">Begin Your <br>Relaxation.</h2>
-                    <p class="text-teal-200 mb-10 font-light text-sm leading-relaxed">Fill out your details below. Once confirmed, you will be redirected to WhatsApp to receive payment details via MTN MoMo or Orange Money.</p>
+    <section id="booking" class="py-32 px-8 container mx-auto">
+        <div class="max-w-6xl mx-auto bg-white border border-stone-100 rounded-[4rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.1)] grid md:grid-cols-2">
+            <div class="p-16 bg-teal-950 text-white flex flex-col justify-between relative">
+                <div class="relative z-10">
+                    <h2 class="text-6xl mb-8 font-bold leading-[0.9] tracking-tighter">Your Journey <br>Starts Here.</h2>
+                    <p class="text-teal-200 mb-12 font-light text-lg leading-relaxed">Finalize your booking via WhatsApp. We process deposits using MTN MoMo and Orange Money for maximum security.</p>
                 </div>
-                <div class="space-y-6 text-xs tracking-[0.2em] uppercase font-bold text-teal-400">
-                    <p class="flex items-center gap-4 text-white"><span>📍</span> Akwa, Douala, Cameroon</p>
-                    <p class="flex items-center gap-4 text-white"><span>📧</span> wellness@lemac.cm</p>
-                    <p class="flex items-center gap-4 text-white"><span>📞</span> +237 990 150 06</p>
+                <div class="space-y-8 text-xs tracking-[0.3em] uppercase font-black text-teal-400 relative z-10">
+                    <p class="flex items-center gap-5 text-white bg-teal-900/50 p-4 rounded-2xl border border-teal-800">
+                        <span class="text-2xl">📍</span> Akwa, Douala, Cameroon
+                    </p>
+                    <p class="flex items-center gap-5 text-white bg-teal-900/50 p-4 rounded-2xl border border-teal-800">
+                        <span class="text-2xl">📧</span> wellness@lemac.cm
+                    </p>
+                    <p class="flex items-center gap-5 text-white bg-teal-900/50 p-4 rounded-2xl border border-teal-800">
+                        <span class="text-2xl">📞</span> +237 990 015 006
+                    </p>
                 </div>
             </div>
-            <div class="p-12 bg-white">
-                <form id="spaBookingForm" class="space-y-5">
+            <div class="p-16 bg-white">
+                <form id="spaBookingForm" class="space-y-8">
                     <div>
-                        <label class="text-[10px] font-bold text-stone-400 uppercase ml-2 mb-1 block">Full Name</label>
-                        <input type="text" id="custName" placeholder="Enter your name" class="w-full p-4 rounded-2xl border border-stone-200 focus:ring-2 focus:ring-teal-600 outline-none transition" required>
+                        <label class="text-[10px] font-black text-stone-400 uppercase tracking-widest ml-4 mb-2 block">Customer Identity</label>
+                        <input type="text" id="custName" placeholder="Enter Full Name" class="w-full p-5 rounded-[1.5rem] border border-stone-200 focus:ring-2 focus:ring-teal-600 outline-none transition font-medium" required>
                     </div>
                     <div>
-                        <label class="text-[10px] font-bold text-stone-400 uppercase ml-2 mb-1 block">Your Phone</label>
-                        <input type="tel" id="custPhone" placeholder="6XX XXX XXX" class="w-full p-4 rounded-2xl border border-stone-200 focus:ring-2 focus:ring-teal-600 outline-none transition" required>
+                        <label class="text-[10px] font-black text-stone-400 uppercase tracking-widest ml-4 mb-2 block">Contact Line</label>
+                        <input type="tel" id="custPhone" placeholder="Mobile / WhatsApp Number" class="w-full p-5 rounded-[1.5rem] border border-stone-200 focus:ring-2 focus:ring-teal-600 outline-none transition font-medium" required>
                     </div>
                     <div>
-                        <label class="text-[10px] font-bold text-stone-400 uppercase ml-2 mb-1 block">Select Treatment</label>
-                        <select id="serviceType" class="w-full p-4 rounded-2xl border border-stone-200 focus:ring-2 focus:ring-teal-600 outline-none bg-white transition cursor-pointer">
+                        <label class="text-[10px] font-black text-stone-400 uppercase tracking-widest ml-4 mb-2 block">Ritual Category</label>
+                        <select id="serviceType" class="w-full p-5 rounded-[1.5rem] border border-stone-200 focus:ring-2 focus:ring-teal-600 outline-none bg-white transition cursor-pointer font-bold">
                             <option value="25000">Massage (25,000 XAF)</option>
                             <option value="10000">Luxury Pedicure (10,000 XAF)</option>
-                            <option value="15000">Body Wellness (15,000 XAF)</option>
+                            <option value="15000">Body Ritual (15,000 XAF)</option>
                         </select>
                     </div>
-                    <div class="p-5 bg-stone-50 rounded-2xl border border-stone-100">
-                        <p class="text-[10px] font-black uppercase mb-3 text-stone-400">Payment Gateway Notice</p>
-                        <p class="text-[11px] text-stone-500 leading-tight">We accept mobile payments. After confirmation, our manager will provide the secure MoMo/Orange number.</p>
-                    </div>
-                    <button type="submit" class="w-full bg-green-600 text-white font-bold py-5 rounded-2xl hover:bg-green-700 transition-all shadow-xl flex justify-center items-center gap-3 transform active:scale-95">
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.432 5.63 1.433h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                        <span>Confirm & Book on WhatsApp</span>
+                    <button type="submit" class="w-full bg-green-600 text-white font-black text-[12px] uppercase tracking-[0.2em] py-6 rounded-[1.5rem] hover:bg-green-700 transition-all shadow-2xl flex justify-center items-center gap-4 transform active:scale-95">
+                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.432 5.63 1.433h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        <span>Confirm Ritual on WhatsApp</span>
                     </button>
                 </form>
             </div>
         </div>
     </section>
 
-    <section id="admin" class="py-16 px-6 bg-stone-900 text-white">
+    <section id="admin" class="py-24 px-8 bg-stone-950 text-white">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold tracking-tighter text-teal-400 mb-8 italic">Lemac Management Feed</h2>
-            <div class="bg-stone-800 rounded-3xl overflow-hidden border border-stone-700 shadow-2xl">
+            <div class="flex flex-col md:flex-row justify-between items-baseline mb-12 gap-5">
+                <h2 class="text-4xl font-bold tracking-tighter text-teal-400 uppercase italic">Lemac Infrastructure Logs</h2>
+                <div class="flex items-center gap-3">
+                    <span class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
+                    <p class="text-[10px] tracking-[0.3em] font-black text-stone-500">Live Backend Stream</p>
+                </div>
+            </div>
+            <div class="bg-stone-900 rounded-[2.5rem] overflow-hidden border border-stone-800 shadow-2xl">
                 <table class="w-full text-left text-sm">
                     <thead>
-                        <tr class="border-b border-stone-700 bg-stone-700/50 uppercase text-stone-500 text-[10px] tracking-widest font-black">
-                            <th class="p-6">Timestamp</th>
-                            <th class="p-6">Customer</th>
-                            <th class="p-6">Treatment</th>
-                            <th class="p-6">Status</th>
+                        <tr class="border-b border-stone-800 bg-stone-800/50 uppercase text-stone-600 text-[10px] tracking-widest font-black">
+                            <th class="p-8">System Time</th>
+                            <th class="p-8">Entity Name</th>
+                            <th class="p-8">Service Requested</th>
+                            <th class="p-8 text-right">Verification Status</th>
                         </tr>
                     </thead>
                     <tbody id="adminTableBody">
@@ -169,13 +184,13 @@
         </div>
     </section>
 
-    <footer class="py-20 px-6 text-center text-stone-400 border-t border-stone-100">
-        <div class="flex justify-center space-x-10 mb-8 font-bold text-xs tracking-widest">
-            <a href="https://frankfru.com" class="hover:text-teal-900 transition underline decoration-teal-100">frankfru.com</a>
-            <a href="https://github.com/chifru19" class="hover:text-teal-900 transition underline decoration-teal-100">GitHub/chifru19</a>
-            <a href="https://linkedin.com" class="hover:text-teal-900 transition underline decoration-blue-100">LinkedIn</a>
+    <footer class="py-24 px-8 text-center text-stone-500 border-t border-stone-100 bg-white">
+        <div class="flex justify-center space-x-12 mb-10 font-black text-[11px] tracking-[0.3em] uppercase">
+            <a href="https://frankfru.com" class="hover:text-teal-900 transition underline decoration-teal-200 decoration-2 underline-offset-8">frankfru.com</a>
+            <a href="https://github.com/chifru19" class="hover:text-teal-900 transition underline decoration-teal-200 decoration-2 underline-offset-8">GitHub/chifru19</a>
+            <a href="https://linkedin.com" class="hover:text-teal-900 text-blue-500 transition underline decoration-blue-200 decoration-2 underline-offset-8">LinkedIn</a>
         </div>
-        <p class="text-[10px] uppercase tracking-[0.4em] font-black text-stone-300">© 2026 LEMAC WELLNESS SPA | AKWA, DOUALA, CAMEROON</p>
+        <p class="text-[10px] uppercase tracking-[0.5em] font-black text-stone-400">© 2026 LEMAC WELLNESS SPA | AKWA, DOUALA, CAMEROON | ENGINEERED BY FRANK FRU</p>
     </footer>
 
     <script>
@@ -195,38 +210,35 @@
             });
         }
 
-        // --- WhatsApp Integration & Booking Logic ---
+        // --- WhatsApp Payload & Admin Logging ---
         document.getElementById('spaBookingForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
             const name = document.getElementById('custName').value;
-            const userPhone = document.getElementById('custPhone').value;
+            const phone = document.getElementById('custPhone').value;
             const service = document.getElementById('serviceType').options[document.getElementById('serviceType').selectedIndex].text;
             const price = document.getElementById('serviceType').value;
             
-            // VERIFIED BUSINESS NUMBER FOR LEMAC
-            const businessNumber = "23799015006"; 
+            // THE VERIFIED BUSINESS NUMBER FOR LEMAC
+            const businessNumber = "237990015006"; 
+
+            const message = `Hello Lemac Wellness! %0A%0AI am reaching out to book a session:%0A👤 Name: ${name}%0A💆‍♂️ Service: ${service}%0A💰 Price: ${price} XAF%0A📱 Contact: ${phone}%0A%0APlease provide the Mobile Money details to secure my ritual.`;
             
-            // Build the dynamic WhatsApp message
-            const message = `Hello Lemac Wellness! %0A%0AI want to book a session:%0A👤 Name: ${name}%0A💆‍♂️ Service: ${service}%0A💰 Price: ${price} XAF%0A📱 Contact: ${userPhone}%0A%0APlease send me the Mobile Money payment details to confirm.`;
+            // Redirect to WhatsApp Lead
+            window.open(`https://wa.me/${businessNumber}?text=${message}`, '_blank');
             
-            // Redirect to WhatsApp
-            const whatsappUrl = `https://wa.me/${businessNumber}?text=${message}`;
-            window.open(whatsappUrl, '_blank');
-            
-            // Optional: Local logging to Admin UI
+            // Push to Admin Table Log
             const tbody = document.getElementById('adminTableBody');
-            const newRow = `
-                <tr class="border-b border-stone-700 bg-stone-800/50">
-                    <td class="p-6 text-stone-500">${new Date().toLocaleTimeString()}</td>
-                    <td class="p-6 font-bold text-white">${name}</td>
-                    <td class="p-6 text-teal-400 font-medium">${service}</td>
-                    <td class="p-6"><span class="bg-teal-900 text-teal-200 px-3 py-1 rounded-full text-[10px] font-black border border-teal-700 uppercase">Redirected</span></td>
+            const row = `
+                <tr class="border-b border-stone-800 bg-stone-900/40 animate-pulse">
+                    <td class="p-8 text-stone-500">${new Date().toLocaleTimeString()}</td>
+                    <td class="p-8 font-bold text-white uppercase tracking-tighter">${name}</td>
+                    <td class="p-8 text-teal-400 italic">${service}</td>
+                    <td class="p-8 text-right uppercase text-[10px] font-black text-teal-200 tracking-widest underline decoration-teal-900">Redirected</td>
                 </tr>
             `;
-            tbody.insertAdjacentHTML('afterbegin', newRow);
+            tbody.insertAdjacentHTML('afterbegin', row);
             
-            alert("Redirecting to WhatsApp to finalize your booking with Lemac Wellness...");
+            alert("Success: Redirecting to WhatsApp to finalize your booking with Lemac Wellness...");
             this.reset();
         });
     </script>
