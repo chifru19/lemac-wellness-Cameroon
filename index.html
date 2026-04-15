@@ -25,7 +25,7 @@
             <a href="#booking" class="hover:text-teal-600 transition">Book Now</a>
             <a href="#admin" class="text-stone-400 hover:text-teal-900 italic transition">Admin Panel</a>
         </div>
-        <a href="tel:+237600000000" class="bg-teal-900 text-white px-4 py-2 rounded text-xs font-bold uppercase hover:bg-teal-800 transition">Contact Us</a>
+        <a href="tel:+23799015006" class="bg-teal-900 text-white px-4 py-2 rounded text-xs font-bold uppercase hover:bg-teal-800 transition">Contact Us</a>
     </nav>
 
     <header class="relative py-16 px-6 bg-teal-50 overflow-hidden">
@@ -33,10 +33,10 @@
             <div>
                 <span class="text-teal-700 font-bold tracking-widest text-xs uppercase italic">Built by Frank Fru for Lemac Wellness</span>
                 <h1 class="text-5xl md:text-7xl mt-4 mb-6 text-teal-950 leading-tight">Lemac Wellness <br>& Luxury Spa.</h1>
-                <p class="text-lg text-gray-600 mb-8 max-w-md">The pinnacle of Cameroonian relaxation. Professional massage therapy, medical pedicures, and holistic rituals in the heart of the city.</p>
+                <p class="text-lg text-gray-600 mb-8 max-w-md">The pinnacle of Cameroonian relaxation. Professional massage therapy, medical pedicures, and holistic rituals in the heart of Douala.</p>
                 <div class="flex gap-4">
                     <a href="#booking" class="bg-teal-800 text-white px-8 py-4 rounded shadow-lg hover:bg-teal-700 transition">Reserve Session</a>
-                    <a href="#gallery" class="bg-white text-teal-900 border border-teal-100 px-8 py-4 rounded shadow-sm hover:bg-stone-50 transition">View Sanctuary</a>
+                    <a href="#services" class="bg-white text-teal-900 border border-teal-100 px-8 py-4 rounded shadow-sm hover:bg-stone-50 transition">View Menu</a>
                 </div>
             </div>
             <div class="relative">
@@ -101,12 +101,12 @@
     <section id="booking" class="py-24 px-6 container mx-auto">
         <div class="max-w-4xl mx-auto bg-white border border-stone-100 rounded-[2rem] overflow-hidden shadow-2xl grid md:grid-cols-2">
             <div class="p-10 bg-teal-900 text-white">
-                <h2 class="text-4xl mb-6 font-bold leading-tight">Begin Your <br>Journey.</h2>
+                <h2 class="text-4xl mb-6 font-bold leading-tight">Begin Your <br>Experience.</h2>
                 <p class="text-teal-200 mb-8 font-light text-sm">Secure your booking with a mobile deposit. We accept MTN MoMo and Orange Money for your convenience.</p>
                 <div class="space-y-4 text-xs tracking-wider uppercase opacity-70 font-bold">
-                    <p>📍 Bastos, Yaoundé</p>
+                    <p>📍 Akwa, Douala</p>
                     <p>📧 wellness@lemac.cm</p>
-                    <p>📞 +237 600 000 000</p>
+                    <p>📞 +237 990 150 06</p>
                 </div>
             </div>
             <div class="p-10">
@@ -155,8 +155,7 @@
                             <th class="p-5">Payment Status</th>
                         </tr>
                     </thead>
-                    <tbody id="adminTableBody">
-                        </tbody>
+                    <tbody id="adminTableBody"></tbody>
                 </table>
             </div>
         </div>
@@ -172,7 +171,6 @@
     </footer>
 
     <script>
-        // --- Dynamic Currency Logic ---
         function convertPrices() {
             const currency = document.getElementById('currencySelector').value;
             const prices = document.querySelectorAll('.price-tag');
@@ -188,34 +186,27 @@
             });
         }
 
-        // --- Live Booking Logic ---
-        document.getElementById('spaBookingForm').addEventListener('submit', async (e) => {
+        // --- UPDATED WhatsApp Lead Generation ---
+        document.getElementById('spaBookingForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            const data = {
-                name: document.getElementById('custName').value,
-                phone: document.getElementById('custPhone').value,
-                service: document.getElementById('serviceType').options[document.getElementById('serviceType').selectedIndex].text,
-                amount: document.getElementById('serviceType').value
-            };
-
-            try {
-                const response = await fetch('/api/book', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
-                });
-                if (response.ok) {
-                    alert("Booking Successful! A WhatsApp notification has been triggered for Lemac Staff.");
-                    loadAdminDashboard();
-                    e.target.reset();
-                }
-            } catch (err) {
-                console.error("Booking Error:", err);
-                alert("Server Connection Error. Please verify Node.js status.");
-            }
+            
+            const name = document.getElementById('custName').value;
+            const userPhone = document.getElementById('custPhone').value;
+            const service = document.getElementById('serviceType').options[document.getElementById('serviceType').selectedIndex].text;
+            
+            // THE TARGET BUSINESS PHONE
+            const businessNumber = "23799015006"; 
+            
+            // Build the message
+            const message = `Hello Lemac Wellness! %0A%0AI would like to book a service:%0A👤 Name: ${name}%0A📱 Customer Contact: ${userPhone}%0A💆‍♂️ Service: ${service}%0A%0APlease confirm my appointment.`;
+            
+            // Open WhatsApp in new tab
+            window.open(`https://wa.me/${businessNumber}?text=${message}`, '_blank');
+            
+            alert("Redirecting to WhatsApp to finalize your booking with Lemac Wellness...");
+            this.reset();
         });
 
-        // --- Admin Data Logic ---
         async function loadAdminDashboard() {
             try {
                 const res = await fetch('/api/admin/bookings');
