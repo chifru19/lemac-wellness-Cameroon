@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <title>Lemac Wellness & Spa | Douala Official</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -10,30 +11,32 @@
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #fdfcf8; -webkit-font-smoothing: antialiased; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
         .glass-nav { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(231, 229, 228, 0.6); }
+        .hero-gradient { background: radial-gradient(circle at top right, #f0f9f9 0%, #fdfcf8 100%); }
         .card-hover { transition: all 0.4s ease; background: #ffffff; border: 1px solid #f3f4f6; cursor: pointer; }
         .card-hover:hover { transform: translateY(-10px); border-color: #134e4a; box-shadow: 0 20px 40px rgba(19, 78, 74, 0.1); }
-        .service-row-btn { display: flex; justify-content: space-between; width: 100%; padding: 12px 16px; margin-bottom: 8px; border-radius: 12px; border: 1px solid #f3f4f6; transition: 0.3s; font-size: 0.9rem; background: white; }
+        .service-row-btn { display: flex; justify-content: space-between; width: 100%; padding: 12px 16px; margin-bottom: 8px; border-radius: 12px; border: 1px solid #f3f4f6; transition: 0.3s; font-size: 0.9rem; background: white; text-align: left; }
+        .service-row-btn:hover { border-color: #134e4a; background: #f0f9f9; }
         .service-row-btn.active { background: #134e4a !important; color: white !important; border-color: #134e4a; }
-        .gallery-frame { border-radius: 3rem; overflow: hidden; height: 400px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); transition: 0.5s; }
-        .gallery-frame:hover { transform: scale(1.02); }
+        .gallery-frame { border-radius: 3rem; overflow: hidden; height: 450px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); transition: 0.5s; }
+        .gallery-frame:hover { transform: scale(1.03); }
     </style>
 </head>
 <body class="text-gray-900 leading-relaxed overflow-x-hidden">
 
     <nav class="flex justify-between items-center px-10 lg:px-20 py-10 glass-nav sticky top-0 z-50">
-        <div class="text-2xl lg:text-4xl font-bold text-teal-950 italic uppercase">LEMAC WELLNESS</div>
+        <div class="text-2xl lg:text-4xl font-bold text-teal-950 italic uppercase tracking-tighter">LEMAC WELLNESS</div>
         <div class="hidden lg:flex space-x-12 text-[10px] font-bold uppercase tracking-widest text-stone-400">
             <a href="#services">Catalogue</a>
             <a href="#booking">Your Corb</a>
             <a href="#gallery">Studio</a>
         </div>
-        <a href="https://wa.me/237676260909" class="bg-teal-950 text-white px-10 py-5 rounded-full text-[11px] font-bold uppercase tracking-widest shadow-xl">WhatsApp Concierge</a>
+        <a href="https://wa.me/237676260909" target="_blank" class="bg-teal-950 text-white px-10 py-5 rounded-full text-[11px] font-bold uppercase tracking-widest shadow-xl hover:bg-teal-800 transition">Concierge</a>
     </nav>
 
     <section id="services" class="py-32 container mx-auto px-10 lg:px-20">
         <div class="text-center mb-24">
-            <h2 class="text-7xl lg:text-9xl text-teal-950 font-bold italic tracking-tighter">Catalogue</h2>
-            <p class="mt-8 text-stone-400 uppercase tracking-widest text-xs font-black">Click individual services to add to your Corb</p>
+            <h2 class="text-7xl lg:text-[8rem] text-teal-950 font-bold mb-12 italic tracking-tighter">Catalogue</h2>
+            <p class="text-stone-400 uppercase tracking-[0.5em] text-xs font-black">Select individual services to add to your corb</p>
         </div>
         <div class="grid md:grid-cols-3 gap-10">
             <div class="p-8 rounded-[4rem] bg-white border border-stone-100 shadow-sm">
@@ -48,6 +51,7 @@
                 <h3 class="text-3xl mb-8 italic">✨ Skincare</h3>
                 <button onclick="toggleCartItem('Deep Facial', 20000, this)" class="service-row-btn"><span>Deep Facial</span> <span>20.000</span></button>
                 <button onclick="toggleCartItem('Body Scrub', 15000, this)" class="service-row-btn"><span>Body Scrub</span> <span>15.000</span></button>
+                <button onclick="toggleCartItem('Face Glow', 10000, this)" class="service-row-btn"><span>Face Glow</span> <span>10.000</span></button>
             </div>
             <div class="p-8 rounded-[4rem] bg-white border border-stone-100 shadow-sm">
                 <img src="images/lipocavitation.jpg" class="w-full h-56 object-cover rounded-[3rem] mb-8" alt="Lipo">
@@ -62,7 +66,7 @@
             <h2 class="text-6xl italic mb-16">Your Selection</h2>
             <div class="bg-stone-900/50 p-12 lg:p-20 rounded-[4rem] border border-stone-800 shadow-2xl mb-16">
                 <div id="cart-list" class="text-left mb-10 space-y-4">
-                    <p class="text-stone-500 italic text-center">No items selected.</p>
+                    <p class="text-stone-500 italic text-center">Your corb is empty. Click services above to select.</p>
                 </div>
                 <div class="border-t border-stone-800 pt-10">
                     <p id="total-cfa" class="text-6xl font-light mb-10">0 CFA</p>
@@ -72,7 +76,7 @@
                     </div>
                 </div>
             </div>
-            <button onclick="sendToWhatsApp()" class="bg-white text-teal-950 px-20 py-10 rounded-full font-black uppercase text-xs tracking-widest hover:bg-stone-100 transition">Confirm Reservation</button>
+            <button onclick="sendToWhatsApp()" class="bg-white text-teal-950 px-20 py-10 rounded-full font-black uppercase text-xs tracking-widest hover:bg-stone-100 transition shadow-2xl">Confirm Reservation</button>
         </div>
     </section>
 
@@ -81,32 +85,36 @@
             <h2 class="text-6xl lg:text-8xl text-teal-950 font-bold mb-32 italic uppercase tracking-tighter">Studio Visuals</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                 <div class="gallery-frame"><img src="images/manicure.jpg" class="w-full h-full object-cover"></div>
-                <div class="gallery-frame"><img src="images/body-scrub.jpg" class="w-full h-full object-cover"></div>
+                <div class="gallery-frame"><img src="images/body scrub.jpg" class="w-full h-full object-cover"></div>
                 <div class="gallery-frame"><img src="images/facial.jpg" class="w-full h-full object-cover"></div>
                 <div class="gallery-frame"><img src="images/massage.jpg" class="w-full h-full object-cover"></div>
                 <div class="gallery-frame"><img src="images/lipocavitation.jpg" class="w-full h-full object-cover"></div>
-                <div class="gallery-frame"><img src="images/pedicure.jpg" class="w-full h-full object-cover"></div>
-                <div class="gallery-frame"><img src="images/waxing.jpg" class="w-full h-full object-cover"></div>
-                <div class="gallery-frame"><img src="images/studio-interior.jpg" class="w-full h-full object-cover"></div>
-                <div class="gallery-frame"><img src="images/cicil-fru.jpg" class="w-full h-full object-cover"></div>
+                <div class="gallery-frame"><img src="images/owner.jpg" class="w-full h-full object-cover"></div>
+                <div class="gallery-frame bg-stone-200 flex items-center justify-center text-stone-400 italic">Visual 07</div>
+                <div class="gallery-frame bg-stone-200 flex items-center justify-center text-stone-400 italic">Visual 08</div>
+                <div class="gallery-frame bg-stone-200 flex items-center justify-center text-stone-400 italic">Visual 09</div>
             </div>
         </div>
     </section>
 
     <footer class="bg-white pt-32 pb-10 px-10 border-t border-stone-100">
-        <div class="container mx-auto grid lg:grid-cols-3 gap-20">
-            <div class="text-center lg:text-left">
-                <img src="images/cicil-fru.jpg" class="w-32 h-32 rounded-full mx-auto lg:mx-0 object-cover border-4 border-white shadow-xl mb-6">
-                <h4 class="font-bold uppercase tracking-widest text-sm text-teal-950">Cicil Fru</h4>
-                <p class="text-stone-400 text-[10px] uppercase">Lead Wellness Specialist</p>
+        <div class="container mx-auto grid lg:grid-cols-3 gap-20 items-center">
+            <div class="flex flex-col items-center lg:items-start">
+                <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-xl mb-6">
+                    <img src="images/owner.jpg" class="w-full h-full object-cover" alt="Cicil Fru">
+                </div>
+                <h4 class="font-black uppercase tracking-widest text-sm text-teal-950">Cicil Fru</h4>
+                <p class="text-stone-400 text-[10px] uppercase tracking-widest mt-2">Owner & Lead Specialist</p>
             </div>
             <div class="text-center">
-                <h4 class="font-bold uppercase text-[10px] mb-8 tracking-widest text-stone-400">Enterprise Location</h4>
+                <h4 class="font-bold uppercase text-[10px] mb-6 tracking-widest text-stone-400">Enterprise Location</h4>
                 <p class="text-stone-600 italic">Carefour lycée bonamousadi<br>Douala, Cameroon</p>
                 <p class="text-teal-700 font-bold mt-4 text-xl">+(237) 676260909</p>
             </div>
             <div class="lg:text-right text-center">
-                <p class="text-stone-300 text-[10px] tracking-widest uppercase italic">© 2026 LEMAC WELLNESS SPA | ENGINEER: FRANK FRU</p>
+                <p class="text-stone-300 text-[10px] tracking-widest uppercase italic">
+                    © 2026 LEMAC WELLNESS SPA | ENGINEER: FRANK FRU
+                </p>
             </div>
         </div>
     </footer>
@@ -115,8 +123,13 @@
         let cart = [];
         function toggleCartItem(name, price, button) {
             const index = cart.findIndex(item => item.name === name);
-            if (index > -1) { cart.splice(index, 1); button.classList.remove('active'); }
-            else { cart.push({ name, price }); button.classList.add('active'); }
+            if (index > -1) {
+                cart.splice(index, 1);
+                button.classList.remove('active');
+            } else {
+                cart.push({ name, price });
+                button.classList.add('active');
+            }
             updateCartDisplay();
         }
         function updateCartDisplay() {
@@ -124,17 +137,25 @@
             const cfaTotal = document.getElementById('total-cfa');
             const eurTotal = document.getElementById('total-eur');
             const usdTotal = document.getElementById('total-usd');
-            if (cart.length === 0) { list.innerHTML = `<p class="text-stone-500 italic text-center">No items selected.</p>`; }
-            else { list.innerHTML = cart.map(item => `<div class="flex justify-between border-b border-stone-800 pb-2"><span>${item.name}</span><span class="text-teal-400 font-bold">${item.price.toLocaleString()} CFA</span></div>`).join(''); }
+            if (cart.length === 0) {
+                list.innerHTML = `<p class="text-stone-500 italic text-center">Your corb is empty. Click services above to select.</p>`;
+            } else {
+                list.innerHTML = cart.map(item => `
+                    <div class="flex justify-between border-b border-stone-800 pb-2">
+                        <span>${item.name}</span>
+                        <span class="text-teal-400 font-bold">${item.price.toLocaleString()} CFA</span>
+                    </div>`).join('');
+            }
             const total = cart.reduce((sum, item) => sum + item.price, 0);
             cfaTotal.innerText = total.toLocaleString() + " CFA";
             eurTotal.innerText = (total / 655.95).toFixed(2);
             usdTotal.innerText = (total / 610).toFixed(2);
         }
         function sendToWhatsApp() {
-            if (cart.length === 0) { alert("Select a service."); return; }
+            if (cart.length === 0) { alert("Please select at least one service."); return; }
             const items = cart.map(i => i.name).join(', ');
-            const message = `Hello Lemac Wellness, I would like to book: ${items}. Total: ${document.getElementById('total-cfa').innerText}.`;
+            const total = document.getElementById('total-cfa').innerText;
+            const message = `Hello Lemac Wellness, I would like to book: ${items}. Total cost: ${total}. Location: Bonamousadi.`;
             window.open(`https://wa.me/237676260909?text=${encodeURIComponent(message)}`, '_blank');
         }
     </script>
