@@ -16,8 +16,8 @@
         .card-hover:hover { transform: translateY(-20px); box-shadow: 0 50px 80px -25px rgba(19, 78, 74, 0.15); border-color: #134e4a; }
         .selected-packet { border: 3px solid #134e4a !important; background-color: #f0f9f9; }
         .service-row { display: flex; justify-content: space-between; border-bottom: 1px solid #f9fafb; padding-bottom: 0.75rem; margin-bottom: 1rem; font-size: 0.9rem; color: #4b5563; }
-        .lang-sub { font-size: 0.7rem; color: #a1a1aa; display: block; margin-top: 4px; }
         .tech-badge { font-weight: 900; font-size: 10px; letter-spacing: 0.5em; color: #94a3b8; border: 1px solid #e2e8f0; padding: 12px 24px; border-radius: 99px; }
+        select { border: 1px solid #e2e8f0; padding: 10px; border-radius: 8px; background: white; font-size: 0.8rem; }
     </style>
 </head>
 <body class="text-gray-900 leading-relaxed overflow-x-hidden">
@@ -25,12 +25,12 @@
     <nav class="flex justify-between items-center px-10 lg:px-20 py-10 glass-nav sticky top-0 z-50">
         <div class="text-2xl lg:text-4xl font-bold text-teal-950 tracking-tighter uppercase italic">LEMAC WELLNESS</div>
         <div class="hidden lg:flex space-x-16 text-[11px] font-black uppercase tracking-[0.3em] text-stone-400">
-            <a href="#services" class="hover:text-teal-700 transition text-center">Menu<span class="lang-sub">Catalogue</span></a>
-            <a href="#gallery" class="hover:text-teal-700 transition text-center">Studio<span class="lang-sub">Visuals</span></a>
-            <a href="#booking" class="hover:text-teal-700 transition font-bold text-teal-900 text-center">Booking<span class="lang-sub">Reservation</span></a>
-            <a href="#admin" class="hover:text-teal-950 italic transition border-l pl-16 border-stone-200 text-center">Admin<span class="lang-sub">Systems</span></a>
+            <a href="#services" class="hover:text-teal-700 transition text-center">Menu</a>
+            <a href="#gallery" class="hover:text-teal-700 transition text-center">Studio</a>
+            <a href="#booking" class="hover:text-teal-700 transition font-bold text-teal-900 text-center">Reservation</a>
+            <a href="#admin" class="hover:text-teal-950 transition text-center">Admin</a>
         </div>
-        <a href="https://wa.me/237676260909" target="_blank" class="bg-teal-950 text-white px-12 py-6 rounded-full text-[11px] font-bold uppercase shadow-2xl tracking-[0.2em] hover:bg-teal-800 transition">Concierge</a>
+        <a href="https://wa.me/237676260909" target="_blank" class="bg-teal-950 text-white px-10 py-5 rounded-full text-[11px] font-bold uppercase shadow-2xl tracking-[0.2em] hover:bg-teal-800 transition">Concierge</a>
     </nav>
 
     <header class="relative py-32 lg:py-64 px-10 lg:px-20 hero-gradient border-b border-stone-100">
@@ -39,7 +39,7 @@
                 <div class="tech-badge inline-block mb-10 uppercase">Architected by Frank Fru</div>
                 <h1 class="text-6xl lg:text-[11rem] mb-16 text-teal-950 leading-[0.85] font-bold italic tracking-tighter">Bilingual <br>Sanctuary.</h1>
                 <p class="text-2xl lg:text-4xl text-stone-600 mb-20 max-w-2xl italic leading-relaxed font-light">L'excellence au cœur de Douala.<br><span class="text-stone-400 not-italic text-xl lg:text-2xl block mt-8">Engineering a sanctuary for high-performance restoration.</span></p>
-                <a href="#services" class="bg-teal-950 text-white px-12 lg:px-20 py-6 lg:py-10 rounded-full font-black uppercase text-[12px] tracking-[0.4em] inline-block shadow-2xl">Consult the Menu</a>
+                <a href="#services" class="bg-teal-950 text-white px-12 lg:px-20 py-6 lg:py-10 rounded-full font-black uppercase text-[12px] tracking-[0.4em] inline-block shadow-2xl hover:bg-teal-800 transition">Consult the Menu</a>
             </div>
             <div class="hero-visual hidden lg:block">
                 <div class="relative z-20 rounded-[10rem] overflow-hidden border-[30px] border-white shadow-2xl transform rotate-3 scale-110">
@@ -78,8 +78,8 @@
             <div id="packet-lipocavitation" onclick="selectPacket('Lipocavitation')" class="p-10 lg:p-16 rounded-[4rem] lg:rounded-[6rem] card-hover">
                 <div class="h-72 bg-stone-50 rounded-[4rem] mb-14 overflow-hidden"><img src="images/lipocavitation.jpg" class="w-full h-full object-cover"></div>
                 <h3 class="text-4xl font-bold text-teal-950 mb-14 border-b pb-10 italic">⏳ Lipocavitation</h3>
-                <p class="text-stone-500 text-sm mb-6 italic leading-relaxed">Body contouring and engineering for high-performance restoration.</p>
-                <div class="service-row"><span>Full Treatment</span> <span class="font-bold">Contact Us</span></div>
+                <p class="text-stone-500 text-sm mb-6 italic leading-relaxed">Advanced body contouring and fat reduction systems.</p>
+                <div class="service-row"><span>Full Treatment</span> <span class="font-bold">Contact</span></div>
                 <p class="mt-8 text-teal-600 font-bold text-[10px] uppercase tracking-widest">Select Packet</p>
             </div>
         </div>
@@ -89,7 +89,16 @@
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-6xl italic mb-12">Reservation Details</h2>
             <div class="bg-stone-900/50 p-12 lg:p-20 rounded-[4rem] border border-stone-800 shadow-2xl mb-16">
-                <p class="text-teal-400 uppercase tracking-[0.5em] text-[10px] font-black mb-8">Selected Packet</p>
+                <p class="text-teal-400 uppercase tracking-[0.5em] text-[10px] font-black mb-8">Currency Calculator</p>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-12">
+                    <input type="number" id="cfa-input" placeholder="Amount in CFA" class="bg-transparent border-b-2 border-teal-800 text-3xl text-center focus:outline-none w-48">
+                    <select id="currency-select" class="text-teal-950 font-bold" onchange="convertCurrency()">
+                        <option value="EUR">TO EURO (€)</option>
+                        <option value="USD">TO DOLLAR ($)</option>
+                    </select>
+                    <p id="conversion-result" class="text-3xl font-bold text-teal-400">0.00</p>
+                </div>
+                <div class="w-full h-px bg-stone-800 mb-12"></div>
                 <p id="selected-display" class="text-3xl lg:text-5xl font-light italic">Please select a service above</p>
             </div>
             <button onclick="sendToWhatsApp()" class="bg-white text-teal-950 px-20 py-10 rounded-full font-black uppercase text-[12px] tracking-[0.4em] shadow-2xl hover:bg-stone-100 transition">Confirm Reservation</button>
@@ -107,15 +116,13 @@
         </div>
     </section>
 
-    <section id="admin" class="py-32 lg:py-64 px-10 lg:px-20 bg-stone-950 text-white">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl lg:text-6xl font-bold italic mb-16 text-teal-500 uppercase">Engineering Systems</h2>
-            <div class="bg-stone-900 p-10 lg:p-20 rounded-[3rem] lg:rounded-[5rem] border border-stone-800 shadow-2xl max-w-5xl mx-auto font-mono text-[10px] lg:text-[11px] text-left uppercase tracking-widest leading-loose">
-                <p class="text-teal-400 mb-6 font-black">SYSTEM_LOG_INITIALIZED: Node Douala_Main_01 Active</p>
-                <p class="text-stone-500 mb-2">Lead Systems Architect: Frank Fru</p>
-                <p class="text-stone-500 mb-2">Technical Repository: chifru19/spa-wellness-cameroon</p>
-                <p class="text-stone-500">Security: AES-256 Cloudflare Edge Encryption Enabled</p>
-            </div>
+    <section id="admin" class="py-32 lg:py-64 px-10 lg:px-20 bg-stone-950 text-white text-center">
+        <h2 class="text-4xl lg:text-6xl font-bold italic mb-16 text-teal-500 uppercase">Engineering Systems</h2>
+        <div class="bg-stone-900 p-10 lg:p-20 rounded-[3rem] lg:rounded-[5rem] border border-stone-800 shadow-2xl max-w-5xl mx-auto font-mono text-[10px] lg:text-[11px] text-left uppercase tracking-widest leading-loose">
+            <p class="text-teal-400 mb-6 font-black">SYSTEM_LOG_INITIALIZED: Node Douala_Main_01 Active</p>
+            <p class="text-stone-500 mb-2">Lead Systems Architect: Frank Fru</p>
+            <p class="text-stone-500 mb-2">Technical Repository: chifru19/spa-wellness-cameroon</p>
+            <p class="text-stone-500">Security: AES-256 Cloudflare Edge Encryption Enabled</p>
         </div>
     </section>
 
@@ -139,7 +146,7 @@
                 <p class="text-teal-700 font-bold mt-4 tracking-tighter text-xl">+(237) 676260909</p>
             </div>
             <div class="text-center md:text-right">
-                <h4 class="font-black uppercase tracking-[0.5em] text-[10px] mb-12">Professional Connect</h4>
+                <h4 class="font-black uppercase tracking-[0.5em] text-[10px] mb-12">Connect</h4>
                 <a href="https://www.linkedin.com/in/frankfru" target="_blank" class="text-stone-500 text-sm block hover:text-teal-600 transition">Official LinkedIn</a>
             </div>
         </div>
@@ -150,6 +157,7 @@
 
     <script>
         let selectedService = "";
+        
         function selectPacket(serviceName) {
             document.querySelectorAll('.card-hover').forEach(card => card.classList.remove('selected-packet'));
             const id = 'packet-' + serviceName.toLowerCase();
@@ -159,6 +167,22 @@
             document.getElementById('selected-display').innerText = "System Priority: " + serviceName;
             if(window.innerWidth < 768) { document.getElementById('booking').scrollIntoView({ behavior: 'smooth' }); }
         }
+
+        function convertCurrency() {
+            const amount = document.getElementById('cfa-input').value;
+            const currency = document.getElementById('currency-select').value;
+            const resultDisplay = document.getElementById('conversion-result');
+            
+            // Fixed rates: 1 EUR = 655.95 CFA, 1 USD = 610 CFA (approx)
+            if(currency === 'EUR') {
+                resultDisplay.innerText = (amount / 655.95).toFixed(2) + " €";
+            } else {
+                resultDisplay.innerText = (amount / 610).toFixed(2) + " $";
+            }
+        }
+
+        document.getElementById('cfa-input').addEventListener('input', convertCurrency);
+
         function sendToWhatsApp() {
             if (!selectedService) { alert("Please select a service packet."); return; }
             const message = `Hello Lemac Wellness, I would like to book a ${selectedService} session at your Bonamousadi location.`;
