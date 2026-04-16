@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <title>Lemac Wellness & Spa | Douala Official</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -12,180 +11,171 @@
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
         .glass-nav { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(231, 229, 228, 0.6); }
         .hero-gradient { background: radial-gradient(circle at top right, #f0f9f9 0%, #fdfcf8 100%); }
-        .card-hover { transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); background: #ffffff; border: 1px solid #f3f4f6; cursor: pointer; }
-        .card-hover:hover { transform: translateY(-20px); box-shadow: 0 50px 80px -25px rgba(19, 78, 74, 0.15); border-color: #134e4a; }
-        .selected-packet { border: 3px solid #134e4a !important; background-color: #f0f9f9; }
-        .service-row { display: flex; justify-content: space-between; border-bottom: 1px solid #f9fafb; padding-bottom: 0.75rem; margin-bottom: 1rem; font-size: 0.9rem; color: #4b5563; }
+        .card-hover { transition: all 0.4s ease; background: #ffffff; border: 1px solid #f3f4f6; cursor: pointer; position: relative; }
+        .card-hover:hover { transform: translateY(-10px); border-color: #134e4a; box-shadow: 0 20px 40px rgba(19, 78, 74, 0.1); }
+        .selected-item { border: 3px solid #134e4a !important; background-color: #f0f9f9; }
+        .service-btn { padding: 8px 12px; border-radius: 99px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; border: 1px solid #ddd; transition: 0.3s; width: 100%; margin-top: 5px; text-align: left; display: flex; justify-content: space-between; }
+        .service-btn.active { background: #134e4a; color: white; border-color: #134e4a; }
         .tech-badge { font-weight: 900; font-size: 10px; letter-spacing: 0.5em; color: #94a3b8; border: 1px solid #e2e8f0; padding: 12px 24px; border-radius: 99px; }
-        select { border: 1px solid #e2e8f0; padding: 10px; border-radius: 8px; background: white; font-size: 0.8rem; }
     </style>
 </head>
 <body class="text-gray-900 leading-relaxed overflow-x-hidden">
 
     <nav class="flex justify-between items-center px-10 lg:px-20 py-10 glass-nav sticky top-0 z-50">
-        <div class="text-2xl lg:text-4xl font-bold text-teal-950 tracking-tighter uppercase italic">LEMAC WELLNESS</div>
-        <div class="hidden lg:flex space-x-16 text-[11px] font-black uppercase tracking-[0.3em] text-stone-400">
-            <a href="#services" class="hover:text-teal-700 transition text-center">Menu</a>
-            <a href="#gallery" class="hover:text-teal-700 transition text-center">Studio</a>
-            <a href="#booking" class="hover:text-teal-700 transition font-bold text-teal-900 text-center">Reservation</a>
-            <a href="#admin" class="hover:text-teal-950 transition text-center">Admin</a>
+        <div class="text-2xl lg:text-4xl font-bold text-teal-950 italic">LEMAC WELLNESS</div>
+        <div class="hidden lg:flex space-x-12 text-[10px] font-bold uppercase tracking-widest text-stone-400">
+            <a href="#services">Catalogue</a>
+            <a href="#booking" class="text-teal-900">Corb / Reservation</a>
+            <a href="#gallery">Studio</a>
         </div>
-        <a href="https://wa.me/237676260909" target="_blank" class="bg-teal-950 text-white px-10 py-5 rounded-full text-[11px] font-bold uppercase shadow-2xl tracking-[0.2em] hover:bg-teal-800 transition">Concierge</a>
+        <a href="https://wa.me/237676260909" class="bg-teal-950 text-white px-10 py-5 rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-teal-800 transition shadow-xl">WhatsApp Concierge</a>
     </nav>
 
-    <header class="relative py-32 lg:py-64 px-10 lg:px-20 hero-gradient border-b border-stone-100">
-        <div class="container mx-auto grid lg:grid-cols-2 gap-20 lg:gap-40 items-center">
-            <div class="hero-content">
-                <div class="tech-badge inline-block mb-10 uppercase">Architected by Frank Fru</div>
-                <h1 class="text-6xl lg:text-[11rem] mb-16 text-teal-950 leading-[0.85] font-bold italic tracking-tighter">Bilingual <br>Sanctuary.</h1>
-                <p class="text-2xl lg:text-4xl text-stone-600 mb-20 max-w-2xl italic leading-relaxed font-light">L'excellence au cœur de Douala.<br><span class="text-stone-400 not-italic text-xl lg:text-2xl block mt-8">Engineering a sanctuary for high-performance restoration.</span></p>
-                <a href="#services" class="bg-teal-950 text-white px-12 lg:px-20 py-6 lg:py-10 rounded-full font-black uppercase text-[12px] tracking-[0.4em] inline-block shadow-2xl hover:bg-teal-800 transition">Consult the Menu</a>
+    <header class="relative py-32 lg:py-64 px-10 lg:px-20 hero-gradient border-b">
+        <div class="container mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div>
+                <div class="tech-badge inline-block mb-10">Architected by Frank Fru</div>
+                <h1 class="text-7xl lg:text-[9rem] mb-12 text-teal-950 leading-tight font-bold italic tracking-tighter">Bilingual Sanctuary.</h1>
+                <p class="text-2xl lg:text-4xl text-stone-600 mb-16 italic font-light">L'excellence au cœur de Douala.<br><span class="text-stone-400 not-italic text-xl block mt-4">Engineering a sanctuary for high-performance restoration.</span></p>
+                <a href="#services" class="bg-teal-950 text-white px-16 py-8 rounded-full font-bold uppercase text-[12px] tracking-widest shadow-2xl">Consult the Menu</a>
             </div>
-            <div class="hero-visual hidden lg:block">
-                <div class="relative z-20 rounded-[10rem] overflow-hidden border-[30px] border-white shadow-2xl transform rotate-3 scale-110">
-                    <img src="images/hero-spa.jpg" class="w-full h-full object-cover min-h-[800px]" alt="Wellness Center Interior">
+            <div class="hidden lg:block">
+                <div class="rounded-[10rem] overflow-hidden border-[25px] border-white shadow-2xl rotate-3 scale-110">
+                    <img src="images/hero-spa.jpg" class="w-full h-[700px] object-cover" alt="Spa Interior">
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="services" class="py-32 lg:py-64 container mx-auto px-10 lg:px-20">
-        <div class="section-title text-center mb-24 lg:mb-56">
-            <h2 class="text-6xl lg:text-[9rem] text-teal-950 font-bold mb-12 italic tracking-tighter">Catalogue</h2>
-            <div class="w-32 lg:w-64 h-1 bg-teal-500 mx-auto mt-16 rounded-full"></div>
-            <p class="mt-16 text-stone-400 uppercase tracking-[0.6em] text-[12px] font-black">Click a card to select your packet</p>
+    <section id="services" class="py-32 container mx-auto px-10 lg:px-20">
+        <div class="text-center mb-24">
+            <h2 class="text-7xl lg:text-9xl text-teal-950 font-bold italic tracking-tighter">Catalogue</h2>
+            <div class="w-48 h-1 bg-teal-500 mx-auto mt-10 rounded-full"></div>
+            <p class="mt-8 text-stone-400 uppercase tracking-widest text-xs font-black">Click services to add them to your Corb</p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-10 lg:gap-20">
-            <div id="packet-massage" onclick="selectPacket('Massage')" class="p-10 lg:p-16 rounded-[4rem] lg:rounded-[6rem] card-hover">
-                <div class="h-72 bg-stone-50 rounded-[4rem] mb-14 overflow-hidden"><img src="images/massage.jpg" class="w-full h-full object-cover"></div>
-                <h3 class="text-4xl font-bold text-teal-950 mb-14 border-b pb-10 italic">💆‍♀️ Massages</h3>
-                <div class="service-row"><span>Lemac Signature</span> <span class="font-bold">25.000</span></div>
-                <div class="service-row"><span>Therapeutic</span> <span class="font-bold">15.000</span></div>
-                <div class="service-row"><span>Hot Stone</span> <span class="font-bold">20.000</span></div>
-                <p class="mt-8 text-teal-600 font-bold text-[10px] uppercase tracking-widest">Select Packet</p>
+        <div class="grid md:grid-cols-3 gap-10">
+            <div class="p-10 rounded-[4rem] card-hover">
+                <img src="images/massage.jpg" class="w-full h-56 object-cover rounded-[3rem] mb-8" alt="Massage">
+                <h3 class="text-3xl mb-8 italic">💆‍♀️ Massages</h3>
+                <button onclick="toggleService('Lemac Signature', 25000, this)" class="service-btn"><span>Lemac Signature</span> <span>25.000</span></button>
+                <button onclick="toggleService('Therapeutic', 15000, this)" class="service-btn"><span>Therapeutic</span> <span>15.000</span></button>
+                <button onclick="toggleService('Hot Stone', 20000, this)" class="service-btn"><span>Hot Stone</span> <span>20.000</span></button>
             </div>
 
-            <div id="packet-skincare" onclick="selectPacket('Skincare')" class="p-10 lg:p-16 rounded-[4rem] lg:rounded-[6rem] card-hover">
-                <div class="h-72 bg-stone-50 rounded-[4rem] mb-14 overflow-hidden"><img src="images/facial.jpg" class="w-full h-full object-cover"></div>
-                <h3 class="text-4xl font-bold text-teal-950 mb-14 border-b pb-10 italic">✨ Skincare</h3>
-                <div class="service-row"><span>Deep Facial</span> <span class="font-bold">20.000</span></div>
-                <div class="service-row"><span>Body Scrub</span> <span class="font-bold">15.000</span></div>
-                <div class="service-row"><span>Face Glow</span> <span class="font-bold">10.000</span></div>
-                <p class="mt-8 text-teal-600 font-bold text-[10px] uppercase tracking-widest">Select Packet</p>
+            <div class="p-10 rounded-[4rem] card-hover">
+                <img src="images/facial.jpg" class="w-full h-56 object-cover rounded-[3rem] mb-8" alt="Facial">
+                <h3 class="text-3xl mb-8 italic">✨ Skincare</h3>
+                <button onclick="toggleService('Deep Facial', 20000, this)" class="service-btn"><span>Deep Facial</span> <span>20.000</span></button>
+                <button onclick="toggleService('Body Scrub', 15000, this)" class="service-btn"><span>Body Scrub</span> <span>15.000</span></button>
             </div>
 
-            <div id="packet-lipocavitation" onclick="selectPacket('Lipocavitation')" class="p-10 lg:p-16 rounded-[4rem] lg:rounded-[6rem] card-hover">
-                <div class="h-72 bg-stone-50 rounded-[4rem] mb-14 overflow-hidden"><img src="images/lipocavitation.jpg" class="w-full h-full object-cover"></div>
-                <h3 class="text-4xl font-bold text-teal-950 mb-14 border-b pb-10 italic">⏳ Lipocavitation</h3>
-                <p class="text-stone-500 text-sm mb-6 italic leading-relaxed">Advanced body contouring and fat reduction systems.</p>
-                <div class="service-row"><span>Full Treatment</span> <span class="font-bold">Contact</span></div>
-                <p class="mt-8 text-teal-600 font-bold text-[10px] uppercase tracking-widest">Select Packet</p>
+            <div class="p-10 rounded-[4rem] card-hover">
+                <img src="images/lipocavitation.jpg" class="w-full h-56 object-cover rounded-[3rem] mb-8" alt="Lipo">
+                <h3 class="text-3xl mb-8 italic">⏳ Lipocavitation</h3>
+                <button onclick="toggleService('Lipo Session', 30000, this)" class="service-btn"><span>Full Session</span> <span>30.000</span></button>
             </div>
         </div>
     </section>
 
     <section id="booking" class="py-32 bg-teal-950 text-white px-10">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-6xl italic mb-12">Reservation Details</h2>
+            <h2 class="text-6xl italic mb-16 italic">Your Corb (Cart)</h2>
             <div class="bg-stone-900/50 p-12 lg:p-20 rounded-[4rem] border border-stone-800 shadow-2xl mb-16">
-                <p class="text-teal-400 uppercase tracking-[0.5em] text-[10px] font-black mb-8">Currency Calculator</p>
-                <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-12">
-                    <input type="number" id="cfa-input" placeholder="Amount in CFA" class="bg-transparent border-b-2 border-teal-800 text-3xl text-center focus:outline-none w-48">
-                    <select id="currency-select" class="text-teal-950 font-bold" onchange="convertCurrency()">
-                        <option value="EUR">TO EURO (€)</option>
-                        <option value="USD">TO DOLLAR ($)</option>
-                    </select>
-                    <p id="conversion-result" class="text-3xl font-bold text-teal-400">0.00</p>
+                <div id="cart-items" class="text-left mb-10 space-y-4">
+                    <p class="text-stone-500 italic">No services added yet...</p>
                 </div>
-                <div class="w-full h-px bg-stone-800 mb-12"></div>
-                <p id="selected-display" class="text-3xl lg:text-5xl font-light italic">Please select a service above</p>
-            </div>
-            <button onclick="sendToWhatsApp()" class="bg-white text-teal-950 px-20 py-10 rounded-full font-black uppercase text-[12px] tracking-[0.4em] shadow-2xl hover:bg-stone-100 transition">Confirm Reservation</button>
-        </div>
-    </section>
-
-    <section id="gallery" class="py-32 lg:py-64 bg-stone-50">
-        <div class="container mx-auto px-10 lg:px-20">
-            <h2 class="text-6xl lg:text-8xl text-teal-950 font-bold mb-32 italic text-center uppercase tracking-tighter">Studio Visuals</h2>
-            <div class="columns-1 md:columns-2 lg:columns-3 gap-12">
-                <div class="mb-12 rounded-[5rem] overflow-hidden shadow-2xl"><img src="images/manicure.jpg" class="w-full"></div>
-                <div class="mb-12 rounded-[5rem] overflow-hidden shadow-2xl"><img src="images/body scrub.jpg" class="w-full"></div>
-                <div class="mb-12 rounded-[5rem] overflow-hidden shadow-2xl"><img src="images/cicil-fru.jpg" class="w-full"></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="admin" class="py-32 lg:py-64 px-10 lg:px-20 bg-stone-950 text-white text-center">
-        <h2 class="text-4xl lg:text-6xl font-bold italic mb-16 text-teal-500 uppercase">Engineering Systems</h2>
-        <div class="bg-stone-900 p-10 lg:p-20 rounded-[3rem] lg:rounded-[5rem] border border-stone-800 shadow-2xl max-w-5xl mx-auto font-mono text-[10px] lg:text-[11px] text-left uppercase tracking-widest leading-loose">
-            <p class="text-teal-400 mb-6 font-black">SYSTEM_LOG_INITIALIZED: Node Douala_Main_01 Active</p>
-            <p class="text-stone-500 mb-2">Lead Systems Architect: Frank Fru</p>
-            <p class="text-stone-500 mb-2">Technical Repository: chifru19/spa-wellness-cameroon</p>
-            <p class="text-stone-500">Security: AES-256 Cloudflare Edge Encryption Enabled</p>
-        </div>
-    </section>
-
-    <footer class="bg-white pt-32 lg:pt-64 pb-20 px-10 lg:px-20 border-t border-stone-100">
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-24 items-start mb-40">
-            <div class="flex flex-col items-center md:items-start text-center md:text-left">
-                <div class="w-48 h-48 lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 border-white shadow-2xl mb-12">
-                    <img src="images/cicil-fru.jpg" class="w-full h-full object-cover" alt="Cicil Fru">
+                <div class="border-t border-stone-800 pt-10 flex flex-col items-center">
+                    <p class="text-teal-400 uppercase tracking-widest text-[10px] mb-4">Total Amount (CFA)</p>
+                    <p id="total-cfa" class="text-6xl font-light mb-10">0 CFA</p>
+                    
+                    <div class="flex gap-10 text-xl font-light text-stone-400 border-t border-stone-800 pt-10 w-full justify-center">
+                        <p>€ <span id="total-eur">0.00</span></p>
+                        <p>$ <span id="total-usd">0.00</span></p>
+                    </div>
                 </div>
-                <h4 class="font-black uppercase tracking-[0.5em] text-[12px] text-teal-950">Cicil Fru</h4>
-                <p class="text-stone-400 text-[10px] uppercase tracking-widest mt-4">Lead Wellness Specialist</p>
             </div>
-            <div class="text-center md:text-left">
-                <h4 class="font-black uppercase tracking-[0.5em] text-[10px] mb-12">Technical Infrastructure</h4>
-                <a href="https://frankfru.com" target="_blank" class="text-stone-500 text-sm block mb-6 hover:text-teal-600 transition">frankfru.com</a>
-                <a href="https://github.com/chifru19" target="_blank" class="text-stone-500 text-sm block hover:text-teal-600 transition">GitHub Profile</a>
-            </div>
-            <div class="text-center md:text-left">
-                <h4 class="font-black uppercase tracking-[0.5em] text-[10px] mb-12">Enterprise Location</h4>
-                <p class="text-stone-600 text-sm italic leading-relaxed">Carefour lycée bonamousadi<br>Douala, Cameroon</p>
-                <p class="text-teal-700 font-bold mt-4 tracking-tighter text-xl">+(237) 676260909</p>
-            </div>
-            <div class="text-center md:text-right">
-                <h4 class="font-black uppercase tracking-[0.5em] text-[10px] mb-12">Connect</h4>
-                <a href="https://www.linkedin.com/in/frankfru" target="_blank" class="text-stone-500 text-sm block hover:text-teal-600 transition">Official LinkedIn</a>
+            <button onclick="sendToWhatsApp()" class="bg-white text-teal-950 px-20 py-10 rounded-full font-black uppercase text-xs tracking-widest shadow-2xl hover:bg-stone-100 transition">Confirm Reservation</button>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-32 bg-stone-50">
+        <div class="container mx-auto px-10 text-center">
+            <h2 class="text-8xl text-teal-950 font-bold mb-32 italic uppercase tracking-tighter">Studio Visuals</h2>
+            <div class="columns-1 md:columns-3 gap-10">
+                <img src="images/manicure.jpg" class="mb-10 rounded-[4rem] shadow-xl">
+                <img src="images/body scrub.jpg" class="mb-10 rounded-[4rem] shadow-xl">
+                <img src="images/cicil-fru.jpg" class="mb-10 rounded-[4rem] shadow-xl">
             </div>
         </div>
-        <div class="text-center pt-24 border-t border-stone-50">
-            <p class="text-stone-300 text-[10px] tracking-[1em] font-black uppercase italic">© 2026 LEMAC WELLNESS SPA | ENGINEER: FRANK FRU</p>
+    </section>
+
+    <footer class="bg-white pt-32 pb-10 px-10 border-t">
+        <div class="container mx-auto grid lg:grid-cols-4 gap-20 mb-24">
+            <div class="text-center lg:text-left">
+                <img src="images/cicil-fru.jpg" class="w-32 h-32 rounded-full mx-auto lg:mx-0 object-cover border-4 border-white shadow-xl mb-6">
+                <h4 class="font-bold uppercase tracking-widest text-sm">Cicil Fru</h4>
+                <p class="text-stone-400 text-xs">Lead Wellness Specialist</p>
+            </div>
+            <div>
+                <h4 class="font-bold uppercase text-[10px] mb-8 tracking-widest">Location</h4>
+                <p class="text-stone-600 italic">Carefour lycée bonamousadi<br>Douala, Cameroon</p>
+                <p class="text-teal-700 font-bold mt-4 tracking-tighter">+(237) 676260909</p>
+            </div>
+            <div>
+                <h4 class="font-bold uppercase text-[10px] mb-8 tracking-widest">Architect</h4>
+                <a href="https://frankfru.com" class="text-stone-500 text-sm block">frankfru.com</a>
+                <a href="https://www.linkedin.com/in/frankfru" class="text-stone-500 text-sm block mt-2">LinkedIn</a>
+            </div>
+        </div>
+        <div class="text-center pt-10 border-t">
+            <p class="text-stone-300 text-[10px] tracking-widest uppercase italic">© 2026 LEMAC WELLNESS SPA | ENGINEER: FRANK FRU</p>
         </div>
     </footer>
 
     <script>
-        let selectedService = "";
-        
-        function selectPacket(serviceName) {
-            document.querySelectorAll('.card-hover').forEach(card => card.classList.remove('selected-packet'));
-            const id = 'packet-' + serviceName.toLowerCase();
-            const el = document.getElementById(id);
-            if(el) el.classList.add('selected-packet');
-            selectedService = serviceName;
-            document.getElementById('selected-display').innerText = "System Priority: " + serviceName;
-            if(window.innerWidth < 768) { document.getElementById('booking').scrollIntoView({ behavior: 'smooth' }); }
-        }
+        let cart = [];
 
-        function convertCurrency() {
-            const amount = document.getElementById('cfa-input').value;
-            const currency = document.getElementById('currency-select').value;
-            const resultDisplay = document.getElementById('conversion-result');
-            
-            // Fixed rates: 1 EUR = 655.95 CFA, 1 USD = 610 CFA (approx)
-            if(currency === 'EUR') {
-                resultDisplay.innerText = (amount / 655.95).toFixed(2) + " €";
+        function toggleService(name, price, element) {
+            const index = cart.findIndex(item => item.name === name);
+            if (index > -1) {
+                cart.splice(index, 1);
+                element.classList.remove('active');
             } else {
-                resultDisplay.innerText = (amount / 610).toFixed(2) + " $";
+                cart.push({ name, price });
+                element.classList.add('active');
             }
+            updateCartUI();
         }
 
-        document.getElementById('cfa-input').addEventListener('input', convertCurrency);
+        function updateCartUI() {
+            const container = document.getElementById('cart-items');
+            const totalCfaEl = document.getElementById('total-cfa');
+            const totalEurEl = document.getElementById('total-eur');
+            const totalUsdEl = document.getElementById('total-usd');
+
+            if (cart.length === 0) {
+                container.innerHTML = `<p class="text-stone-500 italic">No services added yet...</p>`;
+            } else {
+                container.innerHTML = cart.map(item => `
+                    <div class="flex justify-between border-b border-stone-800 pb-2">
+                        <span>${item.name}</span>
+                        <span class="text-teal-400">${item.price.toLocaleString()} CFA</span>
+                    </div>
+                `).join('');
+            }
+
+            const totalCfa = cart.reduce((sum, item) => sum + item.price, 0);
+            totalCfaEl.innerText = totalCfa.toLocaleString() + " CFA";
+            totalEurEl.innerText = (totalCfa / 655.95).toFixed(2);
+            totalUsdEl.innerText = (totalCfa / 610).toFixed(2);
+        }
 
         function sendToWhatsApp() {
-            if (!selectedService) { alert("Please select a service packet."); return; }
-            const message = `Hello Lemac Wellness, I would like to book a ${selectedService} session at your Bonamousadi location.`;
+            if (cart.length === 0) { alert("Please select at least one service."); return; }
+            const services = cart.map(i => i.name).join(', ');
+            const total = document.getElementById('total-cfa').innerText;
+            const message = `Hello Lemac Wellness, I would like to book: ${services}. Total: ${total}. Location: Bonamousadi.`;
             window.open(`https://wa.me/237676260909?text=${encodeURIComponent(message)}`, '_blank');
         }
     </script>
