@@ -9,8 +9,8 @@
     <style>
         html { scroll-behavior: smooth; }
         body { font-family: 'Plus+Jakarta+Sans', sans-serif; }
-        .glass-nav { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
-        .service-card { transition: all 0.3s ease; border: 1px solid #e5e7eb; }
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .service-card { transition: all 0.3s ease; border: 1px solid #e5e7eb; background: white; padding: 2.5rem; }
         .service-card:hover { transform: translateY(-5px); border-color: #134e4a; box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1); }
     </style>
 </head>
@@ -18,25 +18,23 @@
 
     <nav class="fixed w-full z-50 glass-nav px-6 lg:px-20 py-4 flex justify-between items-center">
         <a href="#" class="flex items-center">
-            <img src="images/official-logo.png" class="h-10 lg:h-14 w-auto" alt="Lemac Logo">
+            <img src="logo/official-logo.png" class="h-10 lg:h-14 w-auto" alt="Lemac Logo">
         </a>
         <div class="hidden md:flex space-x-10 text-[10px] tracking-[0.2em] font-bold uppercase text-stone-500">
             <a href="#about" class="hover:text-teal-900 transition">The Spa</a>
             <a href="#services" class="hover:text-teal-900 transition">Treatments</a>
-            <a href="#gallery" class="hover:text-teal-900 transition">Gallery</a>
+            <a href="#studio" class="hover:text-teal-900 transition">Studio</a>
             <a href="https://frankfru.com" class="text-teal-700">Book Now</a>
         </div>
     </nav>
 
     <header class="relative h-screen flex items-center px-6 lg:px-20 overflow-hidden">
-        <img src="images/hero-spa.jpg" class="absolute inset-0 w-full h-full object-cover scale-105 animate-pulse-slow" style="animation-duration: 10s;" alt="Background">
+        <img src="images/hero-spa.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Spa Interior">
         <div class="absolute inset-0 bg-black/40"></div>
-        <div class="relative z-10 max-w-4xl">
-            <span class="text-teal-200 uppercase tracking-[0.3em] text-sm font-bold mb-4 block">Welcome to Lemac</span>
-            <h1 class="text-6xl lg:text-8xl font-bold text-white mb-8 tracking-tighter leading-none italic">Indulgence <br>& Renewal.</h1>
-            <div class="flex space-x-4">
-                <a href="#services" class="bg-white text-stone-900 px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-teal-900 hover:text-white transition">Explore Services</a>
-            </div>
+        <div class="relative z-10 max-w-4xl text-white">
+            <span class="uppercase tracking-[0.3em] text-sm font-bold mb-4 block">Welcome to Lemac</span>
+            <h1 class="text-6xl lg:text-8xl font-bold mb-8 italic leading-none">Indulgence <br>& Renewal.</h1>
+            <a href="#services" class="bg-white text-stone-900 px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-teal-900 hover:text-white transition">Explore Services</a>
         </div>
     </header>
 
@@ -44,77 +42,68 @@
         <div class="container mx-auto px-6 lg:px-20">
             <div class="grid lg:grid-cols-2 gap-20 items-center">
                 <div>
-                    <h2 class="text-sm font-bold text-teal-800 uppercase tracking-[0.3em] mb-6">Our Philosophy</h2>
+                    <h2 class="text-sm font-bold text-teal-800 uppercase tracking-[0.3em] mb-6">Our Vision</h2>
                     <p class="text-3xl lg:text-4xl text-stone-800 font-light leading-snug mb-8">
-                        LEMAC is more than a place—it’s an experience where luxury meets holistic care, leaving you <span class="italic font-semibold">transformed.</span>
+                        Experience world-class wellness curated by our expert team.
                     </p>
-                    <div class="space-y-4 text-stone-500 leading-relaxed">
-                        <p>Based in Douala, Cameroon, we focus on high-quality services and a relaxing atmosphere.</p>
-                        <p class="text-teal-900 font-bold uppercase text-sm tracking-widest">Open Tue - Sun: 9:00 AM — 8:00 PM</p>
+                    <div class="p-6 border-l-4 border-teal-800 bg-stone-50">
+                        <h4 class="font-bold uppercase text-xs tracking-widest mb-2">Opening Hours</h4>
+                        <p class="text-stone-600 text-sm">Tuesday — Sunday: 09:00 AM – 08:00 PM</p>
+                        <p class="text-stone-400 text-xs mt-1 italic">Closed on Mondays</p>
                     </div>
                 </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <img src="images/room-1.jpg" class="rounded-sm shadow-xl mt-12" alt="Room 1">
-                    <img src="images/room-2.jpg" class="rounded-sm shadow-xl" alt="Room 2">
+                <div class="relative">
+                    <img src="images/owner.jpg" class="rounded-sm shadow-2xl w-full object-cover aspect-[3/4]" alt="Owner">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-32 bg-stone-50">
+    <section id="studio" class="py-24 bg-stone-100">
+        <div class="container mx-auto px-6 lg:px-20 text-center mb-16">
+            <h2 class="text-4xl font-bold italic mb-4">The Studio</h2>
+            <p class="text-stone-500 uppercase text-[10px] tracking-widest">A glimpse into our sanctuary</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 px-4">
+            <img src="images/studio-1.jpg" class="h-80 w-full object-cover rounded" alt="Studio 1">
+            <img src="images/studio-2.jpg" class="h-80 w-full object-cover rounded" alt="Studio 2">
+            <img src="images/studio-3.jpg" class="h-80 w-full object-cover rounded" alt="Studio 3">
+        </div>
+    </section>
+
+    <section id="services" class="py-32 bg-white">
         <div class="container mx-auto px-6 lg:px-20">
-            <div class="flex justify-between items-end mb-20 border-b border-stone-200 pb-10">
-                <h2 class="text-5xl font-bold text-teal-950 italic tracking-tighter">Menu of Care</h2>
-                <p class="text-stone-400 uppercase text-[10px] tracking-widest font-bold pb-2">All prices in CFA</p>
-            </div>
-            
+            <h2 class="text-5xl font-bold text-teal-950 italic mb-16 border-b pb-8">Treatments</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="service-card bg-white p-10 flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">Massage Therapy</h3>
-                        <p class="text-stone-500 text-sm leading-relaxed mb-6">Signature, Therapeutic, and Hot Stone options for stress relief and circulation.</p>
-                    </div>
-                    <span class="text-teal-800 font-bold tracking-widest">15,000 - 25,000</span>
+                <div class="service-card">
+                    <h3 class="font-bold mb-4 uppercase text-sm tracking-tighter">Massage Therapy</h3>
+                    <p class="text-stone-500 text-sm mb-6">Signature & Hot Stone.</p>
+                    <span class="text-teal-900 font-bold">15,000 - 25,000 CFA</span>
                 </div>
-
-                <div class="service-card bg-white p-10 flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">Facial Treatments</h3>
-                        <p class="text-stone-500 text-sm leading-relaxed mb-6">Professional deep cleansing and targeted techniques for overall skin health.</p>
-                    </div>
-                    <span class="text-teal-800 font-bold tracking-widest">8,000</span>
+                <div class="service-card">
+                    <h3 class="font-bold mb-4 uppercase text-sm tracking-tighter">Facial Care</h3>
+                    <p class="text-stone-500 text-sm mb-6">Deep Cleansing & Hydration.</p>
+                    <span class="text-teal-900 font-bold">8,000 CFA</span>
                 </div>
-
-                <div class="service-card bg-white p-10 flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">Hamman & Scrub</h3>
-                        <p class="text-stone-500 text-sm leading-relaxed mb-6">Rejuvenating steam and body scrub ritual using the traditional kese glove.</p>
-                    </div>
-                    <span class="text-teal-800 font-bold tracking-widest">13,000</span>
+                <div class="service-card">
+                    <h3 class="font-bold mb-4 uppercase text-sm tracking-tighter">Lipocavitation</h3>
+                    <p class="text-stone-500 text-sm mb-6">Fat reduction (6 Sessions).</p>
+                    <span class="text-teal-900 font-bold">60,000 CFA</span>
                 </div>
-
-                <div class="service-card bg-white p-10 flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">Lipocavitation</h3>
-                        <p class="text-stone-500 text-sm leading-relaxed mb-6">Non-invasive ultrasound waves to break down stubborn fat deposits safely.</p>
-                    </div>
-                    <span class="text-teal-800 font-bold tracking-widest">60,000 / 6 Sessions</span>
+                <div class="service-card">
+                    <h3 class="font-bold mb-4 uppercase text-sm tracking-tighter">Microshading</h3>
+                    <p class="text-stone-500 text-sm mb-6">Semi-permanent powdered brows.</p>
+                    <span class="text-teal-900 font-bold">20,000 CFA</span>
                 </div>
-
-                <div class="service-card bg-white p-10 flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">Microshading</h3>
-                        <p class="text-stone-500 text-sm leading-relaxed mb-6">Semi-permanent soft powdered brow effect lasting up to three years.</p>
-                    </div>
-                    <span class="text-teal-800 font-bold tracking-widest">20,000</span>
+                <div class="service-card">
+                    <h3 class="font-bold mb-4 uppercase text-sm tracking-tighter">Hamman & Scrub</h3>
+                    <p class="text-stone-500 text-sm mb-6">Traditional rejuvenating ritual.</p>
+                    <span class="text-teal-900 font-bold">13,000 CFA</span>
                 </div>
-
-                <div class="service-card bg-white p-10 flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">Vagificial</h3>
-                        <p class="text-stone-500 text-sm leading-relaxed mb-6">Specialized intimate skincare to treat irritation and hyperpigmentation.</p>
-                    </div>
-                    <span class="text-teal-800 font-bold tracking-widest">15,000</span>
+                <div class="service-card">
+                    <h3 class="font-bold mb-4 uppercase text-sm tracking-tighter">Vagificial</h3>
+                    <p class="text-stone-500 text-sm mb-6">Specialized intimate skincare.</p>
+                    <span class="text-teal-900 font-bold">15,000 CFA</span>
                 </div>
             </div>
         </div>
@@ -122,26 +111,26 @@
 
     <footer class="bg-teal-950 text-white pt-20 pb-10">
         <div class="container mx-auto px-6 lg:px-20">
-            <div class="grid md:grid-cols-3 gap-16 mb-20">
+            <div class="grid md:grid-cols-3 gap-16 mb-20 text-center md:text-left">
                 <div>
-                    <img src="images/official-logo.png" class="h-12 brightness-200 mb-8" alt="Logo">
-                    <p class="text-teal-200/60 text-sm leading-relaxed">The ultimate destination for beauty and holistic wellness in Cameroon.</p>
+                    <img src="logo/official-logo.png" class="h-12 brightness-200 mb-8 mx-auto md:mx-0" alt="Logo">
+                    <p class="text-teal-200/60 text-sm">Luxury and holistic care in Douala.</p>
                 </div>
                 <div>
                     <h4 class="text-xs font-bold uppercase tracking-[0.2em] mb-8 text-teal-400">Location</h4>
-                    <p class="text-sm">Douala, Littoral Region<br>Cameroon</p>
+                    <p class="text-sm">Douala, Cameroon</p>
                 </div>
                 <div>
                     <h4 class="text-xs font-bold uppercase tracking-[0.2em] mb-8 text-teal-400">Developer</h4>
                     <p class="text-sm">Created by Chi Barison F. Fru</p>
-                    <div class="mt-4 flex space-x-4 text-teal-400">
-                        <a href="https://github.com/chifru19" class="hover:text-white transition">GitHub</a>
-                        <a href="https://frankfru.com" class="hover:text-white transition">Portfolio</a>
+                    <div class="mt-4 flex justify-center md:justify-start space-x-4 text-teal-400">
+                        <a href="https://github.com/chifru19">GitHub</a>
+                        <a href="https://frankfru.com">Portfolio</a>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-white/10 pt-10 text-center text-[10px] uppercase tracking-widest text-teal-200/40">
-                &copy; 2026 Lemac Wellness. All rights reserved.
+            <div class="border-t border-white/10 pt-10 text-center text-[10px] uppercase tracking-widest opacity-40">
+                &copy; 2026 Lemac Wellness.
             </div>
         </div>
     </footer>
