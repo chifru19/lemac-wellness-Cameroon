@@ -5,221 +5,220 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <title>Lemac Wellness & Spa | Douala Akwa Official</title>
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
     <style>
-        /* CORE DESIGN TOKENS */
         body { 
             font-family: 'Inter', sans-serif; 
             scroll-behavior: smooth; 
-            -webkit-font-smoothing: antialiased;
-            background-color: #fdfcf8;
+            background-color: #fdfcf8; 
+            -webkit-font-smoothing: antialiased; 
         }
 
         h1, h2, h3 { 
             font-family: 'Playfair Display', serif; 
         }
 
-        /* NAVIGATION GLASSMORPHISM */
         .glass-nav { 
             background: rgba(255, 255, 255, 0.98); 
             backdrop-filter: blur(20px); 
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(231, 229, 228, 0.6);
+            border-bottom: 1px solid rgba(231, 229, 228, 0.6); 
         }
 
         .hero-gradient { 
             background: radial-gradient(circle at top right, #f0f9f9 0%, #fdfcf8 100%); 
         }
 
-        /* COMPONENT ANIMATIONS */
         .card-hover { 
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-            background: #ffffff;
-            border: 1px solid #f3f4f6;
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); 
+            background: #ffffff; 
+            border: 1px solid #f3f4f6; 
         }
 
         .card-hover:hover { 
-            transform: translateY(-15px); 
-            box-shadow: 0 40px 70px -20px rgba(20, 78, 78, 0.2); 
+            transform: translateY(-20px); 
+            box-shadow: 0 50px 80px -25px rgba(19, 78, 74, 0.15); 
             border-color: #134e4a; 
         }
 
-        /* SERVICE GRID LOGIC */
         .service-row { 
             display: flex; 
             justify-content: space-between; 
             border-bottom: 1px solid #f9fafb; 
             padding-bottom: 0.75rem; 
-            margin-bottom: 0.85rem; 
+            margin-bottom: 1rem; 
             font-size: 0.9rem; 
-            color: #4b5563;
+            color: #4b5563; 
         }
 
         .lang-sub { 
             font-size: 0.7rem; 
             color: #a1a1aa; 
             display: block; 
-            text-transform: none; 
-            font-weight: 400; 
             margin-top: 4px; 
         }
 
-        /* BRAND UI ELEMENTS */
-        .owner-profile { 
-            box-shadow: 0 0 60px rgba(19, 78, 74, 0.3); 
-            border: 12px solid white; 
+        .owner-footer-profile { 
+            box-shadow: 0 0 50px rgba(19, 78, 74, 0.1); 
+            border: 10px solid white; 
+            transition: all 0.5s ease; 
         }
 
-        .btn-luxury {
-            background-color: #134e4a;
-            color: #ffffff;
-            transition: all 0.4s ease;
-            box-shadow: 0 12px 24px -6px rgba(19, 78, 74, 0.45);
+        .owner-footer-profile:hover { 
+            transform: scale(1.05) rotate(-2deg); 
+            border-color: #f3f4f6; 
         }
 
-        .btn-luxury:hover {
-            background-color: #0f3d3a;
-            transform: translateY(-2px);
-            box-shadow: 0 18px 30px -8px rgba(19, 78, 74, 0.55);
+        .btn-luxury { 
+            background-color: #134e4a; 
+            color: #ffffff; 
+            transition: all 0.4s ease; 
+            box-shadow: 0 15px 30px -8px rgba(19, 78, 74, 0.4); 
+        }
+
+        .tech-badge { 
+            font-weight: 900; 
+            font-size: 10px; 
+            letter-spacing: 0.5em; 
+            color: #94a3b8; 
+            border: 1px solid #e2e8f0; 
+            padding: 12px 24px; 
+            border-radius: 99px; 
         }
     </style>
 </head>
-
 <body class="text-gray-900 leading-relaxed overflow-x-hidden">
 
-    <nav class="flex justify-between items-center px-16 py-10 glass-nav sticky top-0 z-50">
-        <div class="text-4xl font-bold text-teal-950 tracking-tighter uppercase italic">
-            LEMAC WELLNESS
-        </div>
-        
+    <nav class="flex justify-between items-center px-20 py-10 glass-nav sticky top-0 z-50">
+        <div class="text-4xl font-bold text-teal-950 tracking-tighter uppercase italic">LEMAC WELLNESS</div>
         <div class="hidden lg:flex space-x-16 text-[11px] font-black uppercase tracking-[0.3em] text-stone-400">
-            <a href="#services" class="hover:text-teal-700 transition text-center">
-                Menu<span class="lang-sub">Services Catalogue</span>
-            </a>
-            <a href="#gallery" class="hover:text-teal-700 transition text-center">
-                Studio<span class="lang-sub">Visual Space</span>
-            </a>
-            <a href="#booking" class="hover:text-teal-700 transition font-bold text-teal-900 text-center">
-                Booking<span class="lang-sub">Direct Reservation</span>
-            </a>
-            <a href="#admin" class="hover:text-teal-950 italic transition border-l pl-16 border-stone-200 text-center">
-                Admin<span class="lang-sub">Monitoring Feed</span>
-            </a>
+            <a href="#services" class="hover:text-teal-700 transition text-center">Menu<span class="lang-sub">Catalogue</span></a>
+            <a href="#gallery" class="hover:text-teal-700 transition text-center">Studio<span class="lang-sub">Visuals</span></a>
+            <a href="#booking" class="hover:text-teal-700 transition font-bold text-teal-900 text-center">Booking<span class="lang-sub">Reservation</span></a>
+            <a href="#admin" class="hover:text-teal-950 italic transition border-l pl-16 border-stone-200 text-center">Admin<span class="lang-sub">Systems</span></a>
         </div>
-        
-        <div class="cta-engine">
-            <a href="https://wa.me/23799015006" target="_blank" class="bg-teal-950 text-white px-10 py-5 rounded-full text-[11px] font-bold uppercase hover:bg-teal-800 transition shadow-2xl tracking-[0.2em]">
-                WhatsApp Concierge
-            </a>
-        </div>
+        <a href="https://wa.me/23799015006" target="_blank" class="bg-teal-950 text-white px-12 py-6 rounded-full text-[11px] font-bold uppercase shadow-2xl tracking-[0.2em] hover:bg-teal-800 transition">Concierge</a>
     </nav>
 
-    <header class="relative py-56 px-16 hero-gradient border-b border-stone-100">
-        <div class="container mx-auto grid md:grid-cols-2 gap-32 items-center">
+    <header class="relative py-64 px-20 hero-gradient border-b border-stone-100">
+        <div class="container mx-auto grid lg:grid-cols-2 gap-40 items-center">
             <div class="hero-content">
-                <span class="text-teal-900 font-bold tracking-[0.7em] text-[12px] uppercase block mb-8 font-black underline decoration-teal-400 decoration-2 underline-offset-8">
-                    Designed by Frank Fru
-                </span>
-                <h1 class="text-8xl md:text-[10rem] mb-14 text-teal-950 leading-[0.8] font-bold italic tracking-tighter">
-                    Bilingual <br>Sanctuary.
-                </h1>
-                <p class="text-3xl text-stone-600 mb-16 max-w-2xl italic leading-relaxed font-light">
-                    L'excellence du bien-être au cœur de Douala Akwa.<br>
-                    <span class="text-stone-400 not-italic text-xl block mt-6">Defining the gold standard of restoration in Cameroon.</span>
-                </p>
-                <div class="hero-actions">
-                    <a href="#booking" class="btn-luxury px-16 py-8 rounded-full font-black uppercase text-[12px] tracking-[0.3em] inline-block">
-                        Consult the Menu
-                    </a>
-                </div>
+                <div class="tech-badge inline-block mb-10 uppercase">Architected by Frank Fru</div>
+                <h1 class="text-8xl lg:text-[11rem] mb-16 text-teal-950 leading-[0.85] font-bold italic tracking-tighter">Bilingual <br>Sanctuary.</h1>
+                <p class="text-4xl text-stone-600 mb-20 max-w-2xl italic leading-relaxed font-light">L'excellence au cœur de Douala Akwa.<br><span class="text-stone-400 not-italic text-2xl block mt-8">Engineering a sanctuary for high-performance restoration.</span></p>
+                <a href="#services" class="btn-luxury px-20 py-10 rounded-full font-black uppercase text-[12px] tracking-[0.4em] inline-block">Consult the Menu</a>
             </div>
-            
             <div class="hero-visual">
-                <div class="relative z-20 rounded-[8rem] overflow-hidden border-[24px] border-white shadow-2xl transform rotate-3">
-                    <img src="images/hero-spa.jpg" class="w-full h-full object-cover min-h-[700px]" alt="Interior">
+                <div class="relative z-20 rounded-[10rem] overflow-hidden border-[30px] border-white shadow-2xl transform rotate-3 scale-110">
+                    <img src="images/hero-spa.jpg" class="w-full h-full object-cover min-h-[800px]" alt="Wellness Center Interior">
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="services" class="py-56 container mx-auto px-16">
-        <div class="section-title text-center mb-40">
-            <h2 class="text-8xl text-teal-950 font-bold mb-10 italic tracking-tighter">Catalogue de Soins</h2>
-            <p class="text-stone-400 tracking-[0.6em] uppercase text-[12px] font-black">Official Pricing Strategy & Bilingual Menu</p>
-            <div class="w-56 h-1 bg-teal-500 mx-auto mt-12 rounded-full"></div>
+    <section id="services" class="py-64 container mx-auto px-20">
+        <div class="section-title text-center mb-56">
+            <h2 class="text-[9rem] text-teal-950 font-bold mb-12 italic tracking-tighter">Catalogue</h2>
+            <div class="w-64 h-1 bg-teal-500 mx-auto mt-16 rounded-full"></div>
+            <p class="mt-16 text-stone-400 uppercase tracking-[0.6em] text-[12px] font-black">Luxury Service Implementation & Rates</p>
         </div>
-        
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-16">
-            <div class="p-14 rounded-[5rem] card-hover">
-                <div class="h-64 bg-stone-50 rounded-[3rem] mb-12 overflow-hidden shadow-inner"><img src="images/massage.jpg" class="w-full h-full object-cover"></div>
-                <h3 class="text-3xl font-bold text-teal-950 mb-12 border-b pb-8 italic">💆‍♀️ MASSAGES</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-20">
+            <div class="p-16 rounded-[6rem] card-hover">
+                <div class="h-72 bg-stone-50 rounded-[4rem] mb-14 overflow-hidden"><img src="images/massage.jpg" class="w-full h-full object-cover"></div>
+                <h3 class="text-4xl font-bold text-teal-950 mb-14 border-b pb-10 italic">💆‍♀️ MASSAGES</h3>
                 <div class="service-row"><span>Lemac Signature</span> <span class="font-bold">25.000</span></div>
                 <div class="service-row"><span>Therapeutic</span> <span class="font-bold">20.000</span></div>
-                <div class="service-row"><span>Sports Relief</span> <span class="font-bold">15.000</span></div>
-                <div class="service-row"><span>Back Relief</span> <span class="font-bold">10.000</span></div>
+                <div class="service-row"><span>Hot Stone</span> <span class="font-bold">30.000</span></div>
             </div>
-            
-            <div class="p-14 rounded-[5rem] card-hover">
-                <div class="h-64 bg-stone-50 rounded-[3rem] mb-12 overflow-hidden shadow-inner"><img src="images/nails.jpg" class="w-full h-full object-cover"></div>
-                <h3 class="text-3xl font-bold text-teal-950 mb-12 border-b pb-8 italic">💅 NAIL CARE</h3>
+            <div class="p-16 rounded-[6rem] card-hover">
+                <div class="h-72 bg-stone-50 rounded-[4rem] mb-14 overflow-hidden"><img src="images/nails.jpg" class="w-full h-full object-cover"></div>
+                <h3 class="text-4xl font-bold text-teal-950 mb-14 border-b pb-10 italic">💅 NAILS</h3>
                 <div class="service-row"><span>Medical Pedi</span> <span class="font-bold">10.000</span></div>
-                <div class="service-row"><span>Classic Mani</span> <span class="font-bold">5.000</span></div>
                 <div class="service-row"><span>Gel Polish</span> <span class="font-bold">10.000</span></div>
-                <div class="service-row"><span>Acrylic Full</span> <span class="font-bold">15.000</span></div>
+                <div class="service-row"><span>Classic Mani</span> <span class="font-bold">5.000</span></div>
             </div>
-            
-            <div class="p-14 rounded-[5rem] card-hover">
-                <div class="h-64 bg-stone-50 rounded-[3rem] mb-12 overflow-hidden shadow-inner"><img src="images/facial.jpg" class="w-full h-full object-cover"></div>
-                <h3 class="text-3xl font-bold text-teal-950 mb-10 border-b pb-8 italic">✨ SKINCARE</h3>
+            <div class="p-16 rounded-[6rem] card-hover">
+                <div class="h-72 bg-stone-50 rounded-[4rem] mb-14 overflow-hidden"><img src="images/facial.jpg" class="w-full h-full object-cover"></div>
+                <h3 class="text-4xl font-bold text-teal-950 mb-14 border-b pb-10 italic">✨ SKINCARE</h3>
                 <div class="service-row"><span>Deep Facial</span> <span class="font-bold">20.000</span></div>
-                <div class="service-row"><span>Basic Glow</span> <span class="font-bold">10.000</span></div>
                 <div class="service-row"><span>Body Scrub</span> <span class="font-bold">15.000</span></div>
-                <div class="service-row"><span>Sauna Detox</span> <span class="font-bold">10.000</span></div>
+                <div class="service-row"><span>Face Glow</span> <span class="font-bold">10.000</span></div>
             </div>
-            
-            <div class="p-14 rounded-[5rem] card-hover">
-                <div class="h-64 bg-stone-50 rounded-[3rem] mb-12 overflow-hidden shadow-inner"><img src="images/waxing.jpg" class="w-full h-full object-cover"></div>
-                <h3 class="text-3xl font-bold text-teal-950 mb-12 border-b pb-8 italic">🍯 WAXING</h3>
+            <div class="p-16 rounded-[6rem] card-hover">
+                <div class="h-72 bg-stone-50 rounded-[4rem] mb-14 overflow-hidden"><img src="images/waxing.jpg" class="w-full h-full object-cover"></div>
+                <h3 class="text-4xl font-bold text-teal-950 mb-14 border-b pb-10 italic">🍯 WAXING</h3>
                 <div class="service-row"><span>Full Legs</span> <span class="font-bold">10.000</span></div>
-                <div class="service-row"><span>Brazilian</span> <span class="font-bold">10.000</span></div>
-                <div class="service-row"><span>Face Glow</span> <span class="font-bold">5.000</span></div>
+                <div class="service-row"><span>Brazilian</span> <span class="font-bold">12.000</span></div>
                 <div class="service-row"><span>Brow Shape</span> <span class="font-bold">2.000</span></div>
             </div>
         </div>
     </section>
 
-    <section class="py-56 bg-stone-50 border-y border-stone-100 relative overflow-hidden">
-        <div class="container mx-auto px-16 flex flex-col items-center text-center">
-            <div class="w-64 h-64 rounded-full overflow-hidden owner-profile mb-16"><img src="images/owner.jpg" class="w-full h-full object-cover"></div>
-            <h3 class="text-6xl font-bold text-teal-950 mb-10 italic tracking-tighter">Lemac Ethos</h3>
-            <p class="text-stone-500 max-w-4xl italic text-3xl leading-relaxed mb-16 font-light">"Engineering tranquility is a science. At Lemac, we combine medical-grade hygiene with luxury restoration."</p>
-            <div class="signature"><p class="font-black text-teal-950 text-[13px] uppercase tracking-[0.8em]">Lead Wellness Specialist</p><div class="w-32 h-1 bg-teal-400 mx-auto mt-8 rounded-full"></div></div>
-        </div>
-    </section>
-
-    <section id="admin" class="py-56 px-16 bg-stone-950 text-white">
-        <div class="container mx-auto">
-            <h2 class="text-7xl font-bold italic mb-20 tracking-tighter text-teal-500 uppercase">System Logs</h2>
-            <div class="bg-stone-900 rounded-[5rem] overflow-hidden border border-stone-800 shadow-2xl">
-                <table class="w-full text-left text-sm text-stone-400">
-                    <thead><tr class="border-b border-stone-800 bg-stone-800 uppercase text-stone-500 text-[12px] tracking-[0.5em] font-black"><th class="p-16">UTC_TIME</th><th class="p-16">EVENT_LOG</th><th class="p-16 text-right">NODE_STATUS</th></tr></thead>
-                    <tbody id="adminTableBody"><tr class="border-b border-stone-800"><td class="p-16 font-mono text-[11px]">2026-04-15_INIT</td><td class="p-16 text-stone-400 italic font-medium uppercase tracking-widest">Enterprise Digital Environment Online</td><td class="p-16 text-right text-teal-900 font-black">STABLE</td></tr></tbody>
-                </table>
+    <section id="gallery" class="py-64 bg-stone-50">
+        <div class="container mx-auto px-20">
+            <h2 class="text-8xl text-teal-950 font-bold mb-32 italic text-center uppercase tracking-tighter">Studio Visuals</h2>
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-12">
+                <div class="mb-12 rounded-[5rem] overflow-hidden shadow-2xl"><img src="images/manicure.jpg" class="w-full"></div>
+                <div class="mb-12 rounded-[5rem] overflow-hidden shadow-2xl"><img src="images/men pedicure.jpg" class="w-full"></div>
+                <div class="mb-12 rounded-[5rem] overflow-hidden shadow-2xl"><img src="images/body scrub.jpg" class="w-full"></div>
+                <div class="mb-12 rounded-[5rem] overflow-hidden shadow-2xl"><img src="images/lash extension.jpg" class="w-full"></div>
+                <div class="mb-12 rounded-[5rem] overflow-hidden shadow-2xl"><img src="images/owner.jpg" class="w-full"></div>
             </div>
         </div>
     </section>
 
-    <footer class="py-32 text-center text-stone-500 text-[12px] tracking-[0.8em] font-black uppercase bg-white border-t border-stone-50">© 2026 LEMAC WELLNESS SPA | AKWA, DOUALA | SECURED BY FRANK FRU</footer>
+    <section id="admin" class="py-64 px-20 bg-stone-950 text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-6xl font-bold italic mb-16 text-teal-500 uppercase">Engineering Systems</h2>
+            <div class="bg-stone-900 p-20 rounded-[5rem] border border-stone-800 shadow-2xl max-w-5xl mx-auto font-mono text-[11px] text-left uppercase tracking-widest leading-loose">
+                <p class="text-teal-400 mb-6 font-black">SYSTEM_LOG_INITIALIZED: Node Douala_Main_01 Active</p>
+                <p class="text-stone-500 mb-2">Lead Systems Architect: Frank Fru</p>
+                <p class="text-stone-500 mb-2">Technical Repository: chifru19/spa-wellness-cameroon</p>
+                <p class="text-stone-500">Security: AES-256 Cloudflare Edge Encryption Enabled</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white pt-64 pb-20 px-20 border-t border-stone-100">
+        <div class="container mx-auto grid lg:grid-cols-4 gap-24 items-start mb-40">
+            <div class="flex flex-col items-center lg:items-start">
+                <div class="w-64 h-64 rounded-full overflow-hidden owner-footer-profile mb-12">
+                    <img src="images/owner.jpg" class="w-full h-full object-cover" alt="Engineer: Frank Fru">
+                </div>
+                <h4 class="font-black uppercase tracking-[0.5em] text-[12px] text-teal-950">Frank Fru</h4>
+                <p class="text-stone-400 text-[10px] uppercase tracking-widest mt-4">Lead Systems Engineer</p>
+            </div>
+            <div>
+                <h4 class="font-black uppercase tracking-[0.5em] text-[10px] mb-12">Technical Infrastructure</h4>
+                <a href="http://frankfru.com" class="text-stone-500 text-sm block mb-6 hover:text-teal-600 transition">frankfru.com</a>
+                <a href="https://github.com/chifru19" class="text-stone-500 text-sm block hover:text-teal-600 transition">GitHub Profile</a>
+            </div>
+            <div>
+                <h4 class="font-black uppercase tracking-[0.5em] text-[10px] mb-12">Professional Connect</h4>
+                <a href="https://www.linkedin.com/in/frankfru" class="text-stone-500 text-sm block mb-6 hover:text-teal-600 transition">Official LinkedIn</a>
+            </div>
+            <div class="lg:text-right">
+                <h4 class="font-black uppercase tracking-[0.5em] text-[10px] mb-12">Enterprise Location</h4>
+                <p class="text-stone-400 text-sm italic leading-relaxed">Akwa, Douala<br>Republic of Cameroon<br>Digital Command Center</p>
+            </div>
+        </div>
+        <div class="text-center pt-24 border-t border-stone-50">
+            <p class="text-stone-300 text-[10px] tracking-[1em] font-black uppercase italic">© 2026 LEMAC WELLNESS SPA | SECURED & DESIGNED BY FRANK FRU</p>
+        </div>
+    </footer>
 
     <script>
-        document.querySelector('a[href="#booking"]')?.addEventListener('click', () => {
-            const tbody = document.getElementById('adminTableBody');
-            const row = `<tr class="border-b border-stone-800 bg-stone-900/60 animate-pulse"><td class="p-16 text-stone-600 font-mono">${new Date().toISOString()}</td><td class="p-16 font-bold text-white uppercase tracking-widest italic text-xs">Direct API Booking Triggered</td><td class="p-16 text-right uppercase text-[11px] font-black text-teal-400">ACTIVE</td></tr>`;
-            tbody.insertAdjacentHTML('afterbegin', row);
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.padding = '15px 80px';
+                nav.style.boxShadow = '0 20px 40px rgba(0,0,0,0.05)';
+            } else {
+                nav.style.padding = '40px 80px';
+                nav.style.boxShadow = 'none';
+            }
         });
+        console.log("System Status: 100% Operational. Engineer: Frank Fru.");
     </script>
-</body>
+    </body>
 </html>
