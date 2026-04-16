@@ -25,9 +25,8 @@
 
     <nav class="flex justify-between items-center px-10 lg:px-20 py-8 glass-nav sticky top-0 z-50">
         <a href="#" class="flex items-center">
-            <img src="logo/official-logo.png" class="h-16 lg:h-20 w-auto" alt="Lemac Wellness Official Logo">
+            <img src="logo/official-logo.png" class="h-16 lg:h-20 w-auto" alt="Lemac Wellness Logo">
         </a>
-        
         <div class="hidden lg:flex space-x-12 text-[11px] font-black uppercase tracking-[0.3em] text-stone-400">
             <a href="#services" class="hover:text-teal-950">Catalogue</a>
             <a href="#booking" class="hover:text-teal-950">Your Corb</a>
@@ -40,129 +39,97 @@
         <div class="container mx-auto grid lg:grid-cols-2 gap-20 lg:gap-40 items-center">
             <div class="hero-content">
                 <div class="tech-badge inline-block mb-10 uppercase">Architected by Frank Fru</div>
-                <h1 class="text-6xl lg:text-[11rem] mb-16 text-teal-950 leading-[0.85] font-bold italic tracking-tighter leading-none">Lemac <br> Wellness</h1>
-                <p class="text-2xl lg:text-4xl text-stone-600 mb-20 max-w-2xl italic leading-relaxed font-light">L'excellence au cœur de Douala.</p>
+                <h1 class="text-6xl lg:text-[11rem] mb-16 text-teal-950 font-bold italic tracking-tighter leading-none">Lemac <br> Wellness</h1>
+                <p class="text-2xl lg:text-4xl text-stone-600 mb-20 max-w-2xl italic font-light leading-relaxed">L'excellence au cœur de Douala.</p>
                 <a href="#services" class="bg-teal-950 text-white px-12 lg:px-20 py-6 lg:py-10 rounded-full font-black uppercase text-[12px] tracking-[0.4em] inline-block shadow-2xl">Consult the Menu</a>
             </div>
             <div class="hero-visual hidden lg:block">
                 <div class="relative z-20 rounded-[10rem] overflow-hidden border-[30px] border-white shadow-2xl transform rotate-3 scale-110">
-                    <img src="images/hero-spa.jpg" class="w-full h-full object-cover min-h-[800px]" alt=" Lemac Wellness Studio Sanctuary">
+                    <img src="images/hero-spa.jpg" class="w-full h-full object-cover min-h-[800px]" alt="Lemac Sanctuary">
                 </div>
             </div>
         </div>
     </header>
 
-    <section class="py-24 bg-white border-b border-stone-100 px-10">
-        <div class="container mx-auto grid lg:grid-cols-2 gap-20 items-center">
-            <div class="p-12 lg:p-20 bg-stone-50 rounded-[4rem]">
-                <h4 class="font-black uppercase text-[10px] tracking-widest text-teal-800 mb-8">Service Hours</h4>
-                <div class="space-y-4 text-2xl italic text-teal-950">
-                    <p class="flex justify-between border-b border-stone-200 pb-4"><span>Tue — Sun</span> <span>09:00 — 20:00</span></p>
-                    <p class="text-stone-300">Mon — Closed</p>
-                </div>
-            </div>
-            <p class="text-3xl font-light italic leading-relaxed text-stone-600">
-                “Notre mission est de sublimer votre beauté naturelle tout en offrant un havre de paix loin de l'agitation urbaine.”
-            </p>
-        </div>
-    </section>
-
     <section id="services" class="py-32 container mx-auto px-10 lg:px-20 border-b border-stone-100">
         <div class="text-center mb-24">
-            <h2 class="text-7xl lg:text-[8.5rem] text-teal-950 font-bold mb-12 italic tracking-tighter uppercase">Catalogue</h2>
-            <p class="text-stone-400 uppercase tracking-widest text-xs font-black">Click individual treatments to add them to your corb</p>
+            <h2 class="text-7xl lg:text-[8.5rem] text-teal-950 font-bold mb-12 italic uppercase tracking-tighter">Catalogue</h2>
+            <p class="text-stone-400 uppercase tracking-widest text-xs font-black">Select treatments to reserve via WhatsApp</p>
         </div>
         <div class="grid md:grid-cols-3 gap-10">
             <div class="p-8 rounded-[4rem] bg-white border border-stone-100 shadow-sm card-hover">
-                <img src="images/room-1.jpg" class="w-full h-56 object-cover rounded-[3rem] mb-8" alt="Massage Therapy">
+                <img src="images/massage.jpg" class="w-full h-56 object-cover rounded-[3rem] mb-8" alt="Massage">
                 <h3 class="text-3xl mb-8 italic">💆‍♀️ Massages</h3>
                 <button onclick="toggleCartItem('Lemac Signature', 25000, this)" class="service-row-btn"><span>Lemac Signature</span> <span>25.000</span></button>
-                <button onclick="toggleCartItem('Therapeutic Massage', 15000, this)" class="service-row-btn"><span>Therapeutic</span> <span>15.000</span></button>
+                <button onclick="toggleCartItem('Therapeutic', 15000, this)" class="service-row-btn"><span>Therapeutic</span> <span>15.000</span></button>
                 <button onclick="toggleCartItem('Hamman & Scrub', 13000, this)" class="service-row-btn"><span>Hamman & Scrub</span> <span>13.000</span></button>
             </div>
             <div class="p-8 rounded-[4rem] bg-white border border-stone-100 shadow-sm card-hover">
-                <img src="images/facial.jpg" class="w-full h-56 object-cover rounded-[3rem] mb-8" alt="Facial Skincare">
+                <img src="images/facial.jpg" class="w-full h-56 object-cover rounded-[3rem] mb-8" alt="Facial">
                 <h3 class="text-3xl mb-8 italic">✨ Skincare</h3>
                 <button onclick="toggleCartItem('Deep Facial', 20000, this)" class="service-row-btn"><span>Deep Facial</span> <span>20.000</span></button>
-                <button onclick="toggleCartItem('Face Glow', 8000, this)" class="service-row-btn"><span>Face Glow</span> <span>8.000</span></button>
+                <button onclick="toggleCartItem('Face Glow', 10000, this)" class="service-row-btn"><span>Face Glow</span> <span>10.000</span></button>
                 <button onclick="toggleCartItem('Vagificial', 15000, this)" class="service-row-btn"><span>Vagificial</span> <span>15.000</span></button>
             </div>
             <div class="p-8 rounded-[4rem] bg-white border border-stone-100 shadow-sm card-hover">
-                <img src="images/lipocavitation.jpg" class="w-full h-56 object-cover rounded-[3rem] mb-8" alt="Lipo Body Contouring">
+                <img src="images/lipocavitation.jpg" class="w-full h-56 object-cover rounded-[3rem] mb-8" alt="Body">
                 <h3 class="text-3xl mb-8 italic">⏳ Body & Brows</h3>
-                <button onclick="toggleCartItem('Lipocavitation (6 sessions)', 60000, this)" class="service-row-btn"><span>Lipo (6 Sessions)</span> <span>60.000</span></button>
+                <button onclick="toggleCartItem('Lipo (6 Sessions)', 60000, this)" class="service-row-btn"><span>Lipo (6 Sessions)</span> <span>60.000</span></button>
                 <button onclick="toggleCartItem('Microshading', 20000, this)" class="service-row-btn"><span>Microshading</span> <span>20.000</span></button>
                 <button onclick="toggleCartItem('Lash Extensions', 15000, this)" class="service-row-btn"><span>Lash Extensions</span> <span>15.000</span></button>
             </div>
         </div>
     </section>
 
-    <section id="booking" class="py-32 bg-teal-950 text-white px-10 text-center">
-        <h2 class="text-6xl italic mb-16">Selection Status</h2>
-        <div class="max-w-4xl mx-auto bg-stone-900/50 p-12 lg:p-20 rounded-[4rem] border border-stone-800 shadow-2xl mb-16">
-            <div id="cart-list" class="text-left mb-10 space-y-4">
-                <p class="text-stone-500 italic text-center">Please select your desired services from the catalogue above.</p>
-            </div>
-            <div class="border-t border-stone-800 pt-10">
-                <p id="total-cfa" class="text-6xl font-light mb-10">0 CFA</p>
-                <div class="flex gap-10 text-xl font-light text-stone-400 justify-center">
-                    <p>€ <span id="total-eur">0.00</span></p>
-                    <p>$ <span id="total-usd">0.00</span></p>
-                </div>
-            </div>
-        </div>
-        <button onclick="sendToWhatsApp()" class="bg-white text-teal-950 px-20 py-10 rounded-full font-black uppercase text-xs tracking-widest hover:bg-stone-100 transition shadow-2xl">Confirm Reservation</button>
-    </section>
-
     <section id="gallery" class="py-32 lg:py-64 bg-stone-50">
         <div class="container mx-auto px-10 lg:px-20 text-center">
-            <h2 class="text-6xl lg:text-8xl text-teal-950 font-bold mb-8 italic uppercase tracking-tighter">Studio Visuals</h2>
+            <h2 class="text-6xl lg:text-[7rem] text-teal-950 font-bold mb-8 italic uppercase tracking-tighter">Studio Visuals</h2>
             <p class="text-stone-400 uppercase tracking-[0.4em] text-[10px] font-black mb-32">A Glimpse into our Sanctuary</p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="gallery-frame relative group">
-                    <img src="images/room-1.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Massage Suite">
-                    <div class="absolute inset-0 bg-teal-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <span class="bg-white text-teal-950 px-6 py-2 rounded-full font-bold text-[9px] uppercase tracking-widest">Suite I</span>
-                    </div>
+                    <img src="images/room-1.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Suite I">
                 </div>
                 <div class="gallery-frame relative group">
-                    <img src="images/room-2.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Spa Interior">
-                    <div class="absolute inset-0 bg-teal-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <span class="bg-white text-teal-950 px-6 py-2 rounded-full font-bold text-[9px] uppercase tracking-widest">Suite II</span>
-                    </div>
+                    <img src="images/room-2.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Suite II">
                 </div>
                 <div class="gallery-frame relative group">
-                    <img src="images/hero-spa.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Sanctuary">
-                    <div class="absolute inset-0 bg-teal-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <span class="bg-white text-teal-950 px-6 py-2 rounded-full font-bold text-[9px] uppercase tracking-widest">Main Lobby</span>
-                    </div>
+                    <img src="images/manicure.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Nail Bar">
                 </div>
                 <div class="gallery-frame relative group">
-                    <img src="images/owner.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Cicil Fru - Owner">
-                    <div class="absolute inset-0 bg-teal-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <span class="bg-white text-teal-950 px-6 py-2 rounded-full font-bold text-[9px] uppercase tracking-widest">Lead Specialist</span>
-                    </div>
+                    <img src="images/men-pedicure.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Pedicure">
+                </div>
+                <div class="gallery-frame relative group">
+                    <img src="images/facial.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Skincare">
+                </div>
+                <div class="gallery-frame relative group">
+                    <img src="images/lashes.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Lashes">
+                </div>
+                <div class="gallery-frame relative group">
+                    <img src="images/lipocavitation.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Body Sculpting">
+                </div>
+                <div class="gallery-frame relative group">
+                    <img src="images/owner.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Lead Specialist">
                 </div>
             </div>
         </div>
     </section>
 
     <footer class="bg-white pt-32 pb-10 px-10 border-t border-stone-100">
-        <div class="container mx-auto grid lg:grid-cols-3 gap-20 items-center">
-            <div class="flex flex-col items-center lg:items-start">
-                <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-2xl mb-8">
-                    <img src="images/owner.jpg" class="w-full h-full object-cover" alt="Owner">
-                </div>
-                <h4 class="font-black uppercase tracking-widest text-sm text-teal-950">Lead Specialist</h4>
-                <p class="text-stone-400 text-[10px] uppercase tracking-widest mt-2">Owner of Lemac Wellness</p>
+        <div class="container mx-auto grid lg:grid-cols-3 gap-20 items-center text-center lg:text-left">
+            <div>
+                <img src="logo/official-logo.png" class="h-16 mb-8 mx-auto lg:mx-0" alt="Logo">
+                <p class="text-stone-400 text-sm italic">L'excellence au cœur de Douala.</p>
             </div>
             <div class="text-center">
-                <h4 class="font-bold uppercase text-[10px] mb-8 tracking-widest text-stone-400">Enterprise Location</h4>
-                <p class="text-stone-600 italic leading-relaxed">Carefour lycée bonamousadi<br>Douala, Cameroon</p>
+                <h4 class="font-bold uppercase text-[10px] mb-8 tracking-widest text-stone-400">Location & Hours</h4>
+                <p class="text-stone-600 italic leading-relaxed">Carefour lycée bonamousadi<br>Tue - Sun: 9:00 AM - 8:00 PM</p>
                 <p class="text-teal-700 font-bold mt-4 tracking-tighter text-xl">+(237) 676260909</p>
             </div>
             <div class="lg:text-right text-center">
+                <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-stone-100 mx-auto lg:ml-auto lg:mr-0 mb-4">
+                    <img src="images/owner.jpg" class="w-full h-full object-cover" alt="Owner">
+                </div>
                 <p class="text-stone-300 text-[10px] tracking-widest uppercase italic leading-loose">
                     © 2026 LEMAC WELLNESS SPA | ENGINEER: FRANK FRU<br>
                     <a href="https://frankfru.com" class="hover:text-teal-600 transition underline">frankfru.com</a>
@@ -183,15 +150,15 @@
             const list = document.getElementById('cart-list');
             const total = cart.reduce((sum, item) => sum + item.price, 0);
             if (cart.length === 0) { list.innerHTML = `<p class="text-stone-500 italic text-center">Please select your desired services from the catalogue above.</p>`; }
-            else { list.innerHTML = cart.map(item => `<div class="flex justify-between border-b border-stone-800 pb-2"><span>${item.name}</span><span class="text-teal-400 font-bold">${item.price.toLocaleString()} CFA</span></div>`).join(''); }
+            else { list.innerHTML = cart.map(item => `<div class="flex justify-between border-b border-stone-200 pb-2"><span>${item.name}</span><span class="text-teal-800 font-bold">${item.price.toLocaleString()} CFA</span></div>`).join(''); }
             document.getElementById('total-cfa').innerText = total.toLocaleString() + " CFA";
             document.getElementById('total-eur').innerText = (total / 655.95).toFixed(2);
             document.getElementById('total-usd').innerText = (total / 610).toFixed(2);
         }
         function sendToWhatsApp() {
-            if (cart.length === 0) { alert("Please select at least one treatment."); return; }
+            if (cart.length === 0) { alert("Please select a treatment."); return; }
             const items = cart.map(i => i.name).join(', ');
-            const message = `Hello Lemac Wellness, I would like to book: ${items}. Total cost: ${document.getElementById('total-cfa').innerText}. Location: Douala Sanctuary.`;
+            const message = `Hello Lemac Wellness, I would like to book: ${items}. Total: ${document.getElementById('total-cfa').innerText}.`;
             window.open(`https://wa.me/237676260909?text=${encodeURIComponent(message)}`, '_blank');
         }
     </script>
