@@ -14,9 +14,7 @@
         .hero-gradient { background: radial-gradient(circle at top right, #f0f9f9 0%, #fdfcf8 100%); }
         .service-row-btn { display: flex; justify-content: space-between; width: 100%; padding: 12px 16px; margin-bottom: 8px; border-radius: 12px; border: 1px solid #f3f4f6; transition: 0.3s; font-size: 0.9rem; background: white; text-align: left; cursor: pointer; }
         .service-row-btn.active { background: #134e4a !important; color: white !important; border-color: #134e4a; box-shadow: 0 10px 15px rgba(19, 78, 74, 0.2); }
-        .gallery-frame { border-radius: 3rem; overflow: hidden; height: 450px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); transition: 0.5s; border: 1px solid #f1f5f9; }
-        /* Custom Giscus container style */
-        .feedback-section { max-width: 900px; margin: 0 auto; padding: 80px 20px; border-top: 1px solid #f1f5f9; }
+        .gallery-frame { border-radius: 3rem; overflow: hidden; height: 450px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); transition: 0.5s; border: 1px solid #f1f5f9; background-color: #f3f4f6; }
     </style>
 </head>
 <body class="text-gray-900 leading-relaxed overflow-x-hidden">
@@ -75,7 +73,7 @@
     </section>
 
     <section id="booking" class="py-32 bg-teal-950 text-white px-10 text-center">
-        <h2 class="text-6xl italic mb-16 italic">Selection Status</h2>
+        <h2 class="text-6xl italic mb-16">Selection Status</h2>
         <div class="max-w-4xl mx-auto bg-stone-900/50 p-12 lg:p-20 rounded-[4rem] border border-stone-800 shadow-2xl mb-16">
             <div id="cart-list" class="text-left mb-10 space-y-4">
                 <p class="text-stone-500 italic text-center">Your selection is currently empty.</p>
@@ -95,22 +93,22 @@
         <div class="container mx-auto px-10 lg:px-20 text-center">
             <h2 class="text-6xl lg:text-[7.5rem] text-teal-950 font-bold mb-8 italic uppercase tracking-tighter leading-none">Studio Visuals</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-20">
-                <div class="gallery-frame"><img src="images/room-1.jpg" class="w-full h-full object-cover"></div>
-                <div class="gallery-frame"><img src="images/room-2.jpg" class="w-full h-full object-cover"></div>
-                <div class="gallery-frame"><img src="images/body-scrub.jpg" class="w-full h-full object-cover"></div>
-                <div class="gallery-frame"><img src="images/men-pedicure.jpg" class="w-full h-full object-cover"></div>
-                <div class="gallery-frame"><img src="images/lashes.jpg" class="w-full h-full object-cover"></div>
-                <div class="gallery-frame"><img src="images/waxing.jpg" class="w-full h-full object-cover"></div>
-                <div class="gallery-frame"><img src="images/nails.jpg" class="w-full h-full object-cover"></div>
-                <div class="gallery-frame"><img src="images/owner.jpg" class="w-full h-full object-cover"></div>
+                <div class="gallery-frame"><img src="images/room-1.jpg" class="w-full h-full object-cover" alt="Spa Room 1"></div>
+                <div class="gallery-frame"><img src="images/room-2.jpg" class="w-full h-full object-cover" alt="Spa Room 2"></div>
+                <div class="gallery-frame"><img src="images/body-scrub.jpg" class="w-full h-full object-cover" alt="Body Scrub"></div>
+                <div class="gallery-frame"><img src="images/men-pedicure.jpg" class="w-full h-full object-cover" alt="Pedicure Service"></div>
+                <div class="gallery-frame"><img src="images/lashes.jpg" class="w-full h-full object-cover" alt="Lashes extension"></div>
+                <div class="gallery-frame"><img src="images/waxing.jpg" class="w-full h-full object-cover" alt="Waxing service"></div>
+                <div class="gallery-frame"><img src="images/nails.jpg" class="w-full h-full object-cover" alt="Nails"></div>
+                <div class="gallery-frame"><img src="images/owner.jpg" class="w-full h-full object-cover" alt="Check filename: images/owner.jpg"></div>
             </div>
         </div>
     </section>
 
-    <section id="feedback" class="feedback-section">
-        <h2 class="text-5xl italic text-teal-950 mb-6 text-center uppercase font-bold tracking-tighter">Guest Book</h2>
-        <p class="text-center text-stone-500 mb-12 italic">Your feedback helps us maintain excellence.</p>
-        <script src="https://giscus.app/client.js"
+    <section id="feedback" class="py-20 bg-stone-50 border-t border-stone-100">
+        <div class="max-w-4xl mx-auto px-10">
+            <h2 class="text-4xl italic text-teal-950 mb-12 text-center uppercase font-bold tracking-tighter">Atelier Feedback</h2>
+            <script src="https://giscus.app/client.js"
                 data-repo="chifru19/lemac-wellness-Cameroon"
                 data-repo-id="R_kgDOSDhJjQ"
                 data-category="Announcements"
@@ -124,7 +122,8 @@
                 data-lang="en"
                 crossorigin="anonymous"
                 async>
-        </script>
+            </script>
+        </div>
     </section>
 
     <footer class="bg-white pt-32 pb-10 px-10 border-t border-stone-100 text-center lg:text-left">
@@ -132,15 +131,15 @@
             <img src="logo/official-logo.png" class="h-16 mb-8 mx-auto lg:mx-0" alt="Logo">
             <div class="text-center">
                 <p class="text-stone-600 italic">Carefour lycée bonamousadi<br>Douala, Cameroon</p>
-                <p class="text-teal-700 font-bold mt-4 tracking-tighter text-xl">+(237) 676260902</p>
-                <div class="flex justify-center gap-6 mt-6 text-[10px] font-bold uppercase tracking-widest">
-                    <a href="https://frankfru.com" class="text-stone-400 hover:text-teal-950 transition">Portfolio</a>
-                    <a href="https://www.linkedin.com/in/frank-fru-454593252/" class="text-stone-400 hover:text-teal-950 transition">LinkedIn</a>
+                <div class="mt-4 flex justify-center gap-6">
+                    <a href="https://frankfru.com" class="text-[10px] font-bold uppercase tracking-widest text-teal-700 hover:underline">Portfolio</a>
+                    <a href="https://www.linkedin.com/in/frank-fru-454593252/" class="text-[10px] font-bold uppercase tracking-widest text-teal-700 hover:underline">LinkedIn</a>
                 </div>
+                <p class="text-teal-700 font-bold mt-4 tracking-tighter text-xl">+(237) 676260902</p>
             </div>
             <div class="lg:text-right text-center">
                 <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-stone-100 mx-auto lg:ml-auto lg:mr-0 mb-4">
-                    <img src="images/owner.jpg" class="w-full h-full object-cover" alt="Owner">
+                    <img src="images/owner.jpg" class="w-full h-full object-cover" alt="Frank Fru">
                 </div>
                 <p class="text-stone-300 text-[10px] tracking-widest uppercase italic leading-loose">© 2026 LEMAC WELLNESS SPA | BY FRANK FRU</p>
             </div>
