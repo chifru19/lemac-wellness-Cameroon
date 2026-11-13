@@ -110,16 +110,46 @@
     </section>
 
     <section id="feedback" class="py-32 bg-stone-50 border-t border-stone-100">
-    <div class="max-w-3xl mx-auto px-8">
+    <div class="max-w-5xl mx-auto px-8">
         <div class="text-center mb-16">
-            <h2 class="text-5xl italic text-teal-950 mb-4 uppercase font-bold tracking-tighter leading-tight">Client <br> Reviews</h2>
-            <p class="text-stone-600 text-sm tracking-wide uppercase">Share your experience at Lemac Wellness Spa.</p>
+            <h2 class="text-5xl italic text-teal-950 mb-4 uppercase font-bold tracking-tighter leading-tight">Client <br> Testimonials</h2>
+            <p class="text-stone-600 text-sm tracking-wide uppercase">Read what our cherished clients are saying about Lemac Wellness Spa.</p>
         </div>
-        <div class="bg-white p-12 lg:p-16 rounded-[3rem] border border-stone-200 shadow-xl">
+
+        <!-- Live Client Reviews Display Grid -->
+        <div class="grid md:grid-cols-3 gap-8 mb-20">
+            <div class="bg-white p-8 rounded-3xl border border-stone-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="text-amber-500 text-sm mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-stone-700 italic text-sm mb-6">"The absolute best massage and facial treatment in Douala! The ambiance is so peaceful and professional."</p>
+                </div>
+                <p class="text-teal-950 font-bold text-xs uppercase tracking-widest">— Marie-Claire N.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border border-stone-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="text-amber-500 text-sm mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-stone-700 italic text-sm mb-6">"Incredible service! The sauna and hammam left me completely rejuvenated. Highly recommended!"</p>
+                </div>
+                <p class="text-teal-950 font-bold text-xs uppercase tracking-widest">— Jean-Paul B.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border border-stone-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="text-amber-500 text-sm mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-stone-700 italic text-sm mb-6">"Top-tier manicure and pedicure. The attention to detail is unmatched in Bonamousadi."</p>
+                </div>
+                <p class="text-teal-950 font-bold text-xs uppercase tracking-widest">— Sandra T.</p>
+            </div>
+        </div>
+
+        <!-- Review Submission Form -->
+        <div class="max-w-3xl mx-auto bg-white p-12 lg:p-16 rounded-[3rem] border border-stone-200 shadow-xl">
+            <h3 class="text-2xl font-serif text-teal-950 mb-2 text-center">Share Your Experience</h3>
+            <p class="text-stone-600 text-center mb-8 text-sm">Submit your review to be featured on our site.</p>
+            
             <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
                 <input type="hidden" name="access_key" value="f08c0b43-cba2-4e8c-b736-bb7935fec494">
                 <input type="hidden" name="subject" value="New Client Review - Lemac Wellness Spa">
-                <input type="hidden" name="email" value="reviews@lemacwellnessspa.com">
+                <input type="hidden" name="redirect" value="https://lemacwellnessspa.com/#feedback">
                 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                 
                 <div>
