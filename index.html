@@ -18,6 +18,7 @@
         .service-row-btn { display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 14px 20px; margin-bottom: 10px; border-radius: 16px; border: 1px solid #f3f4f6; transition: 0.4s; font-size: 0.95rem; background: white; text-align: left; cursor: pointer; }
         .service-row-btn.active { background: #134e4a !important; color: white !important; border-color: #134e4a; box-shadow: 0 12px 20px rgba(19, 78, 74, 0.15); }
         .service-row-btn.active .price-tag { color: #99f6e4 !important; }
+        .service-row-btn.active .sub-label { color: #ccfbf1 !important; }
         .gallery-frame { border-radius: 3rem; overflow: hidden; height: 450px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.12); transition: 0.5s; border: 1px solid #f1f5f9; background-color: #f3f4f6; }
         .gallery-frame:hover { transform: translateY(-10px); }
     </style>
@@ -85,32 +86,39 @@
             <div>
                 <h2 class="text-5xl italic text-teal-950 mb-12 border-b border-stone-100 pb-8 uppercase font-bold tracking-tighter">Interactive Catalogue</h2>
                 
-                <p class="text-[10px] font-black uppercase tracking-[0.25em] text-stone-400 mb-4">Spa & Wellness Treatments</p>
+                <p class="text-[10px] font-black uppercase tracking-[0.25em] text-stone-400 mb-4">Spa, Body & Wellness</p>
                 <div class="space-y-2 mb-10">
-                    <button onclick="toggleCartItem('Facial', 8000, this)" class="service-row-btn"><span>Facial</span> <span class="price-tag font-semibold">8.000 CFA</span></button>
+                    <button onclick="toggleCartItem('Facial (Standard)', 5000, this)" class="service-row-btn"><span>Facial <span class="sub-label text-xs text-stone-400">(Standard)</span></span> <span class="price-tag font-semibold">5.000 CFA</span></button>
+                    <button onclick="toggleCartItem('Facial (Deluxe)', 8000, this)" class="service-row-btn"><span>Facial <span class="sub-label text-xs text-stone-400">(Deluxe)</span></span> <span class="price-tag font-semibold">8.000 CFA</span></button>
                     <button onclick="toggleCartItem('Massage', 15000, this)" class="service-row-btn"><span>Massage</span> <span class="price-tag font-semibold">15.000 CFA</span></button>
                     <button onclick="toggleCartItem('Pedicure', 5000, this)" class="service-row-btn"><span>Pedicure</span> <span class="price-tag font-semibold">5.000 CFA</span></button>
-                    <button onclick="toggleCartItem('Manicure', 5000, this)" class="service-row-btn"><span>Manicure</span> <span class="price-tag font-semibold">5.000 CFA</span></button>
-                    <button onclick="toggleCartItem('Lamination', 10000, this)" class="service-row-btn"><span>Lamination</span> <span class="price-tag font-semibold">10.000 CFA</span></button>
+                    <button onclick="toggleCartItem('Manicure (from)', 5000, this)" class="service-row-btn"><span>Manicure <span class="sub-label text-xs text-stone-400">(Upwards)</span></span> <span class="price-tag font-semibold">5.000 CFA</span></button>
                     <button onclick="toggleCartItem('Waxing', 10000, this)" class="service-row-btn"><span>Waxing</span> <span class="price-tag font-semibold">10.000 CFA</span></button>
-                    <button onclick="toggleCartItem('Vagificial', 10000, this)" class="service-row-btn"><span>Vagificial</span> <span class="price-tag font-semibold">10.000 CFA</span></button>
-                    <button onclick="toggleCartItem('Microblading', 20000, this)" class="service-row-btn"><span>Microblading</span> <span class="price-tag font-semibold">20.000 CFA</span></button>
-                    <button onclick="toggleCartItem('Lash Extensions', 10000, this)" class="service-row-btn"><span>Lash Extensions</span> <span class="price-tag font-semibold">10.000 CFA</span></button>
-                    <button onclick="toggleCartItem('Lipo (6 Sessions)', 40000, this)" class="service-row-btn"><span>Lipo (6 Sessions)</span> <span class="price-tag font-semibold">40.000 CFA</span></button>
-                    <button onclick="toggleCartItem('Sauna/Hammam', 13000, this)" class="service-row-btn"><span>Sauna/Hammam</span> <span class="price-tag font-semibold">13.000 CFA</span></button>
+                    <button onclick="toggleCartItem('Vagificial / Vagacial', 10000, this)" class="service-row-btn"><span>Vagificial / Vagacial</span> <span class="price-tag font-semibold">10.000 CFA</span></button>
+                    <button onclick="toggleCartItem('Cellulite Treatment (1 Session)', 10000, this)" class="service-row-btn"><span>Cellulite Treatment <span class="sub-label text-xs text-stone-400">(1 Session)</span></span> <span class="price-tag font-semibold">10.000 CFA</span></button>
+                    <button onclick="toggleCartItem('Cellulite Treatment (6 Sessions)', 40000, this)" class="service-row-btn"><span>Cellulite Treatment <span class="sub-label text-xs text-stone-400">(6 Sessions)</span></span> <span class="price-tag font-semibold">40.000 CFA</span></button>
+                    <button onclick="toggleCartItem('Facial Lifting (Double Chin Reduction)', 10000, this)" class="service-row-btn"><span>Facial Lifting (Double Chin Reduction)</span> <span class="price-tag font-semibold">10.000 CFA</span></button>
+                    <button onclick="toggleCartItem('Sauna / Hammam Body Scrub (10k)', 10000, this)" class="service-row-btn"><span>Sauna / Hammam Body Scrub <span class="sub-label text-xs text-stone-400">(Tier 1)</span></span> <span class="price-tag font-semibold">10.000 CFA</span></button>
+                    <button onclick="toggleCartItem('Sauna / Hammam Body Scrub (13k)', 13000, this)" class="service-row-btn"><span>Sauna / Hammam Body Scrub <span class="sub-label text-xs text-stone-400">(Tier 2)</span></span> <span class="price-tag font-semibold">13.000 CFA</span></button>
+                    <button onclick="toggleCartItem('Butt & Breast Lifting (1 Session)', 10000, this)" class="service-row-btn"><span>Butt & Breast Lifting <span class="sub-label text-xs text-stone-400">(1 Session)</span></span> <span class="price-tag font-semibold">10.000 CFA</span></button>
+                    <button onclick="toggleCartItem('Scar Reduction / Removal (Per Session)', 5000, this)" class="service-row-btn"><span>Scar Reduction / Removal <span class="sub-label text-xs text-stone-400">(Per Session)</span></span> <span class="price-tag font-semibold">5.000 CFA</span></button>
                 </div>
 
-                <p class="text-[10px] font-black uppercase tracking-[0.25em] text-stone-400 mb-4">Beauty World & Aesthetic Studio</p>
+                <p class="text-[10px] font-black uppercase tracking-[0.25em] text-stone-400 mb-4">Hair, Brows, Lashes & Makeup</p>
                 <div class="space-y-2">
-                    <button onclick="toggleCartItem('Studio Makeup', null, this)" class="service-row-btn"><span>Studio Makeup</span> <span class="price-tag text-xs uppercase tracking-wider text-teal-800 font-semibold">On Quote</span></button>
-                    <button onclick="toggleCartItem('Colombian Butt & Breast Lifting', null, this)" class="service-row-btn"><span>Colombian Butt & Breast Lifting</span> <span class="price-tag text-xs uppercase tracking-wider text-teal-800 font-semibold">On Quote</span></button>
-                    <button onclick="toggleCartItem('Laser Hair Removal', null, this)" class="service-row-btn"><span>Laser Hair Removal</span> <span class="price-tag text-xs uppercase tracking-wider text-teal-800 font-semibold">On Quote</span></button>
-                    <button onclick="toggleCartItem('Wig Making & Ventilation', null, this)" class="service-row-btn"><span>Wig Making & Ventilation</span> <span class="price-tag text-xs uppercase tracking-wider text-teal-800 font-semibold">On Quote</span></button>
-                    <button onclick="toggleCartItem('Frontal & Wig Installation', null, this)" class="service-row-btn"><span>Frontal & Wig Installation</span> <span class="price-tag text-xs uppercase tracking-wider text-teal-800 font-semibold">On Quote</span></button>
-                    <button onclick="toggleCartItem('Hair Braiding & Dressing', null, this)" class="service-row-btn"><span>Hair Braiding & Dressing</span> <span class="price-tag text-xs uppercase tracking-wider text-teal-800 font-semibold">On Quote</span></button>
-                    <button onclick="toggleCartItem('Shading & Ombre Brows', null, this)" class="service-row-btn"><span>Shading & Ombre Brows</span> <span class="price-tag text-xs uppercase tracking-wider text-teal-800 font-semibold">On Quote</span></button>
-                    <button onclick="toggleCartItem('Double Chin & Cellulite Reduction', null, this)" class="service-row-btn"><span>Double Chin & Cellulite Reduction</span> <span class="price-tag text-xs uppercase tracking-wider text-teal-800 font-semibold">On Quote</span></button>
-                    <button onclick="toggleCartItem('Scar, Tattoo & Stretch Mark Removal', null, this)" class="service-row-btn"><span>Scar, Tattoo & Stretch Mark Removal</span> <span class="price-tag text-xs uppercase tracking-wider text-teal-800 font-semibold">On Quote</span></button>
+                    <button onclick="toggleCartItem('Wig Making', 5000, this)" class="service-row-btn"><span>Wig Making</span> <span class="price-tag font-semibold">5.000 CFA</span></button>
+                    <button onclick="toggleCartItem('Pixie Wigs Styling', 10000, this)" class="service-row-btn"><span>Pixie Wigs Styling</span> <span class="price-tag font-semibold">10.000 CFA</span></button>
+                    <button onclick="toggleCartItem('Revamping', 5000, this)" class="service-row-btn"><span>Revamping</span> <span class="price-tag font-semibold">5.000 CFA</span></button>
+                    <button onclick="toggleCartItem('Hair Layering', 10000, this)" class="service-row-btn"><span>Hair Layering</span> <span class="price-tag font-semibold">10.000 CFA</span></button>
+                    <button onclick="toggleCartItem('Lamination', 10000, this)" class="service-row-btn"><span>Lamination</span> <span class="price-tag font-semibold">10.000 CFA</span></button>
+                    <button onclick="toggleCartItem('Makeup (from)', 5000, this)" class="service-row-btn"><span>Makeup <span class="sub-label text-xs text-stone-400">(Upwards)</span></span> <span class="price-tag font-semibold">5.000 CFA</span></button>
+                    <button onclick="toggleCartItem('Braids (from)', 5000, this)" class="service-row-btn"><span>Braids <span class="sub-label text-xs text-stone-400">(Upwards)</span></span> <span class="price-tag font-semibold">5.000 CFA</span></button>
+                    <button onclick="toggleCartItem('Frontal Installation (from)', 5000, this)" class="service-row-btn"><span>Frontal Installation <span class="sub-label text-xs text-stone-400">(Upwards)</span></span> <span class="price-tag font-semibold">5.000 CFA</span></button>
+                    <button onclick="toggleCartItem('Microblading / Shading', 20000, this)" class="service-row-btn"><span>Microblading / Shading</span> <span class="price-tag font-semibold">20.000 CFA</span></button>
+                    <button onclick="toggleCartItem('Lash Extensions (10k)', 10000, this)" class="service-row-btn"><span>Lash Extensions <span class="sub-label text-xs text-stone-400">(Classic / Tier 1)</span></span> <span class="price-tag font-semibold">10.000 CFA</span></button>
+                    <button onclick="toggleCartItem('Lash Extensions (12k)', 12000, this)" class="service-row-btn"><span>Lash Extensions <span class="sub-label text-xs text-stone-400">(Tier 2)</span></span> <span class="price-tag font-semibold">12.000 CFA</span></button>
+                    <button onclick="toggleCartItem('Lash Extensions (15k)', 15000, this)" class="service-row-btn"><span>Lash Extensions <span class="sub-label text-xs text-stone-400">(Tier 3)</span></span> <span class="price-tag font-semibold">15.000 CFA</span></button>
+                    <button onclick="toggleCartItem('Ventilation', null, this)" class="service-row-btn"><span>Ventilation <span class="sub-label text-xs text-stone-400">(Depends)</span></span> <span class="price-tag text-xs uppercase tracking-wider text-teal-800 font-semibold">On Quote</span></button>
                 </div>
             </div>
 
