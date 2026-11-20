@@ -51,19 +51,30 @@
     <section id="gallery" class="py-32 lg:py-64 bg-white">
         <div class="container mx-auto px-8 lg:px-20 text-center">
             <h2 class="text-6xl lg:text-[7.5rem] text-teal-950 font-bold mb-8 italic uppercase tracking-tighter leading-none">Studio Visuals</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-20">
+            <p class="text-stone-400 text-xs font-black uppercase tracking-[0.3em] mb-16">Full Studio Tour & Treatment Highlights</p>
+
+            <!-- Studio Walkthrough Video -->
+            <div class="max-w-md mx-auto mb-16">
+                <div class="rounded-[3rem] overflow-hidden shadow-2xl border-4 border-stone-100 bg-black aspect-[9/16]">
+                    <video src="images/studio-tour.mp4" controls playsinline preload="metadata" class="w-full h-full object-cover"></video>
+                </div>
+                <p class="text-[10px] font-black uppercase tracking-[0.3em] text-teal-950 mt-4">Studio Tour Video</p>
+            </div>
+
+            <!-- 12-Item Visual Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
                 <div class="gallery-frame"><video src="images/massage-therapy.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video></div>
                 <div class="gallery-frame"><video src="images/hair-styling.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video></div>
                 <div class="gallery-frame"><video src="images/lace-revamp.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video></div>
                 <div class="gallery-frame"><video src="images/curls-styling.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video></div>
-                <div class="gallery-frame"><img src="images/room-1.jpg" class="w-full h-full object-cover"></div>
-                <div class="gallery-frame"><img src="images/room-2.jpg" class="w-full h-full object-cover"></div>
-                <div class="gallery-frame"><img src="images/body-scrub.jpg" class="w-full h-full object-cover"></div>
-                <div class="gallery-frame"><img src="images/lipocavitation.jpg" class="w-full h-full object-cover"></div>
-                <div class="gallery-frame"><img src="images/lashes.jpg" class="w-full h-full object-cover"></div>
-                <div class="gallery-frame"><img src="images/waxing.jpg" class="w-full h-full object-cover"></div>
-                <div class="gallery-frame"><img src="images/nails.jpg" class="w-full h-full object-cover"></div>
-                <div class="gallery-frame"><img src="images/men-pedicure.jpg" class="w-full h-full object-cover"></div>
+                <div class="gallery-frame"><img src="images/room-1.jpg" class="w-full h-full object-cover" alt="Spa Room 1"></div>
+                <div class="gallery-frame"><img src="images/room-2.jpg" class="w-full h-full object-cover" alt="Spa Room 2"></div>
+                <div class="gallery-frame"><img src="images/body-scrub.jpg" class="w-full h-full object-cover" alt="Body Scrub"></div>
+                <div class="gallery-frame"><img src="images/lipocavitation.jpg" class="w-full h-full object-cover" alt="Lipocavitation"></div>
+                <div class="gallery-frame"><img src="images/lashes.jpg" class="w-full h-full object-cover" alt="Lashes"></div>
+                <div class="gallery-frame"><img src="images/waxing.jpg" class="w-full h-full object-cover" alt="Waxing"></div>
+                <div class="gallery-frame"><img src="images/nails.jpg" class="w-full h-full object-cover" alt="Nails"></div>
+                <div class="gallery-frame"><img src="images/men-pedicure.jpg" class="w-full h-full object-cover" alt="Men Pedicure"></div>
             </div>
         </div>
     </section>
@@ -114,86 +125,87 @@
     </section>
 
     <section id="feedback" class="py-32 bg-stone-50 border-t border-stone-100">
-    <div class="max-w-5xl mx-auto px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-5xl italic text-teal-950 mb-4 uppercase font-bold tracking-tighter leading-tight">Client <br> Testimonials</h2>
-            <p class="text-stone-600 text-sm tracking-wide uppercase">Read what our cherished clients are saying about Lemac Wellness Spa.</p>
-        </div>
-
-        <!-- Live Client Reviews Display Grid -->
-        <div id="testimonials-grid" class="grid md:grid-cols-3 gap-8 mb-20">
-            <div class="bg-white p-8 rounded-3xl border border-stone-200 shadow-sm flex flex-col justify-between">
-                <div>
-                    <div class="text-amber-500 text-sm mb-4">⭐⭐⭐⭐⭐</div>
-                    <p class="text-stone-700 italic text-sm mb-6">"The absolute best massage and facial treatment in Douala! The ambiance is so peaceful and professional."</p>
-                </div>
-                <p class="text-teal-950 font-bold text-xs uppercase tracking-widest">— Marie-Claire N.</p>
+        <div class="max-w-5xl mx-auto px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl italic text-teal-950 mb-4 uppercase font-bold tracking-tighter leading-tight">Client <br> Testimonials</h2>
+                <p class="text-stone-600 text-sm tracking-wide uppercase">Read what our cherished clients are saying about Lemac Wellness Spa.</p>
             </div>
-            <div class="bg-white p-8 rounded-3xl border border-stone-200 shadow-sm flex flex-col justify-between">
-                <div>
-                    <div class="text-amber-500 text-sm mb-4">⭐⭐⭐⭐⭐</div>
-                    <p class="text-stone-700 italic text-sm mb-6">"Incredible service! The sauna and hammam left me completely rejuvenated. Highly recommended!"</p>
+
+            <!-- Live Client Reviews Display Grid -->
+            <div id="testimonials-grid" class="grid md:grid-cols-3 gap-8 mb-20">
+                <div class="bg-white p-8 rounded-3xl border border-stone-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="text-amber-500 text-sm mb-4">⭐⭐⭐⭐⭐</div>
+                        <p class="text-stone-700 italic text-sm mb-6">"The absolute best massage and facial treatment in Douala! The ambiance is so peaceful and professional."</p>
+                    </div>
+                    <p class="text-teal-950 font-bold text-xs uppercase tracking-widest">— Marie-Claire N.</p>
                 </div>
-                <p class="text-teal-950 font-bold text-xs uppercase tracking-widest">— Jean-Paul B.</p>
+                <div class="bg-white p-8 rounded-3xl border border-stone-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="text-amber-500 text-sm mb-4">⭐⭐⭐⭐⭐</div>
+                        <p class="text-stone-700 italic text-sm mb-6">"Incredible service! The sauna and hammam left me completely rejuvenated. Highly recommended!"</p>
+                    </div>
+                    <p class="text-teal-950 font-bold text-xs uppercase tracking-widest">— Jean-Paul B.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border border-stone-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="text-amber-500 text-sm mb-4">⭐⭐⭐⭐⭐</div>
+                        <p class="text-stone-700 italic text-sm mb-6">"Top-tier manicure and pedicure. The attention to detail is unmatched in Bonamousadi."</p>
+                    </div>
+                    <p class="text-teal-950 font-bold text-xs uppercase tracking-widest">— Sandra T.</p>
+                </div>
             </div>
-            <div class="bg-white p-8 rounded-3xl border border-stone-200 shadow-sm flex flex-col justify-between">
-                <div>
-                    <div class="text-amber-500 text-sm mb-4">⭐⭐⭐⭐⭐</div>
-                    <p class="text-stone-700 italic text-sm mb-6">"Top-tier manicure and pedicure. The attention to detail is unmatched in Bonamousadi."</p>
-                </div>
-                <p class="text-teal-950 font-bold text-xs uppercase tracking-widest">— Sandra T.</p>
+
+            <!-- Review Submission Form -->
+            <div class="max-w-3xl mx-auto bg-white p-12 lg:p-16 rounded-[3rem] border border-stone-200 shadow-xl">
+                <h3 class="text-2xl font-serif text-teal-950 mb-2 text-center">Share Your Experience</h3>
+                <p class="text-stone-600 text-center mb-8 text-sm">Submit your review to be featured on our site.</p>
+                
+                <form id="review-form" class="space-y-6">
+                    <input type="hidden" name="access_key" value="f08c0b43-cba2-4e8c-b736-bb7935fec494">
+                    <input type="hidden" name="subject" value="New Client Review - Lemac Wellness Spa">
+                    <input type="hidden" name="redirect" value="https://lemacwellnessspa.com/#feedback">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    
+                    <div>
+                        <label class="block text-[10px] font-black uppercase tracking-widest text-stone-500 mb-2">Rating</label>
+                        <select name="rating" required class="w-full px-6 py-4 rounded-2xl border border-stone-200 focus:outline-none focus:border-teal-900 text-stone-800 bg-stone-50 text-sm">
+                            <option value="5 Stars (⭐⭐⭐⭐⭐)">⭐⭐⭐⭐⭐ - 5 Stars (Exceptional)</option>
+                            <option value="4 Stars (⭐⭐⭐⭐)">⭐⭐⭐⭐ - 4 Stars (Very Good)</option>
+                            <option value="3 Stars (⭐⭐⭐)">⭐⭐⭐ - 3 Stars (Good)</option>
+                            <option value="2 Stars (⭐⭐)">⭐⭐ - 2 Stars (Fair)</option>
+                            <option value="1 Star (⭐)">⭐ - 1 Star (Poor)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-[10px] font-black uppercase tracking-widest text-stone-500 mb-2">Your Full Name</label>
+                        <input type="text" name="name" required class="w-full px-6 py-4 rounded-2xl border border-stone-200 focus:outline-none focus:border-teal-900 text-stone-800 bg-stone-50 text-sm" placeholder="Enter your name...">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-[10px] font-black uppercase tracking-widest text-stone-500 mb-2">Your Review</label>
+                        <textarea name="message" rows="5" required class="w-full px-6 py-4 rounded-2xl border border-stone-200 focus:outline-none focus:border-teal-900 text-stone-800 bg-stone-50 text-sm" placeholder="Tell us about your spa treatment..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-teal-950 text-white py-5 rounded-full font-black uppercase text-[10px] tracking-[0.3em] hover:bg-teal-900 transition shadow-xl">
+                        Submit Review
+                    </button>
+                </form>
             </div>
         </div>
-
-        <!-- Review Submission Form -->
-        <div class="max-w-3xl mx-auto bg-white p-12 lg:p-16 rounded-[3rem] border border-stone-200 shadow-xl">
-            <h3 class="text-2xl font-serif text-teal-950 mb-2 text-center">Share Your Experience</h3>
-            <p class="text-stone-600 text-center mb-8 text-sm">Submit your review to be featured on our site.</p>
-            
-            <form id="review-form" class="space-y-6">
-                <input type="hidden" name="access_key" value="f08c0b43-cba2-4e8c-b736-bb7935fec494">
-                <input type="hidden" name="subject" value="New Client Review - Lemac Wellness Spa">
-                <input type="hidden" name="redirect" value="https://lemacwellnessspa.com/#feedback">
-                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-                
-                <div>
-                    <label class="block text-[10px] font-black uppercase tracking-widest text-stone-500 mb-2">Rating</label>
-                    <select name="rating" required class="w-full px-6 py-4 rounded-2xl border border-stone-200 focus:outline-none focus:border-teal-900 text-stone-800 bg-stone-50 text-sm">
-                        <option value="5 Stars (⭐⭐⭐⭐⭐)">⭐⭐⭐⭐⭐ - 5 Stars (Exceptional)</option>
-                        <option value="4 Stars (⭐⭐⭐⭐)">⭐⭐⭐⭐ - 4 Stars (Very Good)</option>
-                        <option value="3 Stars (⭐⭐⭐)">⭐⭐⭐ - 3 Stars (Good)</option>
-                        <option value="2 Stars (⭐⭐)">⭐⭐ - 2 Stars (Fair)</option>
-                        <option value="1 Star (⭐)">⭐ - 1 Star (Poor)</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="block text-[10px] font-black uppercase tracking-widest text-stone-500 mb-2">Your Full Name</label>
-                    <input type="text" name="name" required class="w-full px-6 py-4 rounded-2xl border border-stone-200 focus:outline-none focus:border-teal-900 text-stone-800 bg-stone-50 text-sm" placeholder="Enter your name...">
-                </div>
-                
-                <div>
-                    <label class="block text-[10px] font-black uppercase tracking-widest text-stone-500 mb-2">Your Review</label>
-                    <textarea name="message" rows="5" required class="w-full px-6 py-4 rounded-2xl border border-stone-200 focus:outline-none focus:border-teal-900 text-stone-800 bg-stone-50 text-sm" placeholder="Tell us about your spa treatment..."></textarea>
-                </div>
-                
-                <button type="submit" class="w-full bg-teal-950 text-white py-5 rounded-full font-black uppercase text-[10px] tracking-[0.3em] hover:bg-teal-900 transition shadow-xl">
-                    Submit Review
-                </button>
-            </form>
-        </div>
-    </div>
-</section>
+    </section>
 
     <footer class="bg-white pt-32 pb-12 px-8 border-t border-stone-100">
         <div class="container mx-auto grid lg:grid-cols-3 gap-20 items-center">
             <img src="logo/official-logo.png" class="h-20 mb-8 mx-auto lg:mx-0" alt="Logo">
             
-    <div class="flex justify-center space-x-6 mb-8 text-xs uppercase tracking-widest font-bold text-stone-600">
-        <a href="https://www.facebook.com/share/1dZ5KVximX/" target="_blank" class="hover:text-teal-950 transition">Facebook</a>
-        <a href="https://www.instagram.com/lemac_beautyworld?vrfl=bHcyOXRlcDVoNmNl" target="_blank" class="hover:text-teal-950 transition">Instagram</a>
-        <a href="https://wa.me/237676260902" target="_blank" class="hover:text-teal-950 transition">WhatsApp</a>
-    </div><div class="text-center">
+            <div class="flex justify-center space-x-6 mb-8 text-xs uppercase tracking-widest font-bold text-stone-600">
+                <a href="https://www.facebook.com/share/1dZ5KVximX/" target="_blank" class="hover:text-teal-950 transition">Facebook</a>
+                <a href="https://www.instagram.com/lemac_beautyworld?vrfl=bHcyOXRlcDVoNmNl" target="_blank" class="hover:text-teal-950 transition">Instagram</a>
+                <a href="https://wa.me/237676260902" target="_blank" class="hover:text-teal-950 transition">WhatsApp</a>
+            </div>
+            <div class="text-center">
                 <p class="text-stone-600 italic text-lg">Carefour Lycée Bonamousadi<br>Douala, Cameroon</p>
                 <p class="text-teal-950 font-black mt-6 tracking-tighter text-2xl">+(237) 676260902</p>
             </div>
@@ -247,62 +259,61 @@
         }
     </script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        loadStoredReviews();
-        
-        const form = document.getElementById('review-form');
-        if (form) {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const ratingSelect = document.querySelector('select[name="rating"]');
-                const nameInput = document.querySelector('input[name="name"]');
-                const messageInput = document.querySelector('textarea[name="message"]');
-                
-                if (!ratingSelect || !nameInput || !messageInput) return;
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadStoredReviews();
+            
+            const form = document.getElementById('review-form');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const ratingSelect = document.querySelector('select[name="rating"]');
+                    const nameInput = document.querySelector('input[name="name"]');
+                    const messageInput = document.querySelector('textarea[name="message"]');
+                    
+                    if (!ratingSelect || !nameInput || !messageInput) return;
 
-                const newReview = { 
-                    rating: ratingSelect.value, 
-                    name: nameInput.value, 
-                    message: messageInput.value 
-                };
-                
-                // Save to localStorage
-                let reviews = JSON.parse(localStorage.getItem('lemac_reviews') || '[]');
-                reviews.push(newReview);
-                localStorage.setItem('lemac_reviews', JSON.stringify(reviews));
-                
-                // Append instantly to grid
-                appendReviewCard(newReview);
-                
-                // Reset form & notify
-                form.reset();
-                alert('Thank you! Your review has been published instantly.');
-            });
+                    const newReview = { 
+                        rating: ratingSelect.value, 
+                        name: nameInput.value, 
+                        message: messageInput.value 
+                    };
+                    
+                    // Save to localStorage
+                    let reviews = JSON.parse(localStorage.getItem('lemac_reviews') || '[]');
+                    reviews.push(newReview);
+                    localStorage.setItem('lemac_reviews', JSON.stringify(reviews));
+                    
+                    // Append instantly to grid
+                    appendReviewCard(newReview);
+                    
+                    // Reset form & notify
+                    form.reset();
+                    alert('Thank you! Your review has been published instantly.');
+                });
+            }
+        });
+
+        function appendReviewCard(review) {
+            const grid = document.getElementById('testimonials-grid');
+            if (!grid) return;
+            const card = document.createElement('div');
+            card.className = 'bg-white p-8 rounded-3xl border border-stone-200 shadow-sm flex flex-col justify-between';
+            card.innerHTML = `
+                <div>
+                    <div class="text-amber-500 text-sm mb-4">${review.rating}</div>
+                    <p class="text-stone-700 italic text-sm mb-6">"${review.message}"</p>
+                </div>
+                <p class="text-teal-950 font-bold text-xs uppercase tracking-widest">— ${review.name}</p>
+            `;
+            grid.appendChild(card);
         }
-    });
 
-    function appendReviewCard(review) {
-        const grid = document.getElementById('testimonials-grid');
-        if (!grid) return;
-        const card = document.createElement('div');
-        card.className = 'bg-white p-8 rounded-3xl border border-stone-200 shadow-sm flex flex-col justify-between';
-        card.innerHTML = `
-            <div>
-                <div class="text-amber-500 text-sm mb-4">${review.rating}</div>
-                <p class="text-stone-700 italic text-sm mb-6">"${review.message}"</p>
-            </div>
-            <p class="text-teal-950 font-bold text-xs uppercase tracking-widest">— ${review.name}</p>
-        `;
-        grid.appendChild(card);
-    }
-
-    function loadStoredReviews() {
-        let reviews = JSON.parse(localStorage.getItem('lemac_reviews') || '[]');
-        reviews.forEach(review => appendReviewCard(review));
-    }
-</script>
+        function loadStoredReviews() {
+            let reviews = JSON.parse(localStorage.getItem('lemac_reviews') || '[]');
+            reviews.forEach(review => appendReviewCard(review));
+        }
+    </script>
 </body>
-
 </html>
